@@ -1,0 +1,66 @@
+[Device]
+Family=ecp5u
+PartType=LFE5U-45F
+PartName=LFE5U-45F-8BG381I
+SpeedGrade=8
+Package=CABGA381
+OperatingCondition=IND
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=DDR_GENERIC
+CoreRevision=6.0
+ModuleName=ddr_in
+SourceFormat=verilog
+ParameterFileVersion=1.0
+Date=01/08/2021
+Time=13:29:38
+
+[Parameters]
+Verilog=1
+VHDL=0
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+mode=Receive
+trioddr=0
+io_type=LVCMOS18
+width=16
+freq_in=150
+bandwidth=4800
+aligned=Centered
+pre-configuration=ENABLED
+mode2=Receive
+trioddr2=0
+io_type2=LVCMOS18
+freq_in2=150
+gear=2:1
+aligned2=Centered
+width2=16
+DataLane=By Time
+EnECLK=0
+Interface=GDDRX1_RX.SCLK.Centered
+Delay=Static Default
+DelVal=
+EnInEdge=
+NumEdge=BOTH
+EnDynamic=0
+GenPll=0
+Freq=
+AFreq=
+Reference=0
+IOBUF=
+ReceiverSync=0
+EnDynamicAlign=
+DynamicAlign=
+MIPIFilter=0
+enClkIBuf=0
+ClkIBuf=LVDS
+
+[Command]
+cmd_line= -w -n ddr_in -lang verilog -synth lse -bus_exp 7 -bb -arch sa5p00 -type iol -mode Receive -io_type LVCMOS18 -width 16 -freq_in 150 -gear 2 -del 128

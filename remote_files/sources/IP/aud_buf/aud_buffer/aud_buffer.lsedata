@@ -1,0 +1,1756 @@
+<top name = "aud_buffer"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+    <clockitem name = "Clock"  type = "port" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 1
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "work">
+
+<unit name = "aud_buffer">
+
+    <!--
+        Top Level Pins: 39
+    -->
+
+    <pins>
+        <pitem  name = "Data[15]"  direction = "in"  />
+        <pitem  name = "Data[14]"  direction = "in"  />
+        <pitem  name = "Data[13]"  direction = "in"  />
+        <pitem  name = "Data[12]"  direction = "in"  />
+        <pitem  name = "Data[11]"  direction = "in"  />
+        <pitem  name = "Data[10]"  direction = "in"  />
+        <pitem  name = "Data[9]"  direction = "in"  />
+        <pitem  name = "Data[8]"  direction = "in"  />
+        <pitem  name = "Data[7]"  direction = "in"  />
+        <pitem  name = "Data[6]"  direction = "in"  />
+        <pitem  name = "Data[5]"  direction = "in"  />
+        <pitem  name = "Data[4]"  direction = "in"  />
+        <pitem  name = "Data[3]"  direction = "in"  />
+        <pitem  name = "Data[2]"  direction = "in"  />
+        <pitem  name = "Data[1]"  direction = "in"  />
+        <pitem  name = "Data[0]"  direction = "in"  />
+        <pitem  name = "Clock"  direction = "in"  />
+        <pitem  name = "WrEn"  direction = "in"  />
+        <pitem  name = "RdEn"  direction = "in"  />
+        <pitem  name = "Reset"  direction = "in"  />
+        <pitem  name = "Q[15]"  direction = "out"  />
+        <pitem  name = "Q[14]"  direction = "out"  />
+        <pitem  name = "Q[13]"  direction = "out"  />
+        <pitem  name = "Q[12]"  direction = "out"  />
+        <pitem  name = "Q[11]"  direction = "out"  />
+        <pitem  name = "Q[10]"  direction = "out"  />
+        <pitem  name = "Q[9]"  direction = "out"  />
+        <pitem  name = "Q[8]"  direction = "out"  />
+        <pitem  name = "Q[7]"  direction = "out"  />
+        <pitem  name = "Q[6]"  direction = "out"  />
+        <pitem  name = "Q[5]"  direction = "out"  />
+        <pitem  name = "Q[4]"  direction = "out"  />
+        <pitem  name = "Q[3]"  direction = "out"  />
+        <pitem  name = "Q[2]"  direction = "out"  />
+        <pitem  name = "Q[1]"  direction = "out"  />
+        <pitem  name = "Q[0]"  direction = "out"  />
+        <pitem  name = "Empty"  direction = "out"  />
+        <pitem  name = "Full"  direction = "out"  />
+        <pitem  name = "AlmostFull"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 79
+    -->
+
+    <instance  name = "AND2_t4"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        <pitem  name = "B"  direction = "in"  />
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "WrEn"  />
+        <nitem  name = "invout_2"  />
+        <nitem  name = "wren_i"  />
+        </nets>
+    </instance>
+
+    <instance  name = "INV_8"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Full"  />
+        <nitem  name = "invout_2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "AND2_t3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        <pitem  name = "B"  direction = "in"  />
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "RdEn"  />
+        <nitem  name = "invout_1"  />
+        <nitem  name = "rden_i"  />
+        </nets>
+    </instance>
+
+    <instance  name = "INV_7"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "Empty"  />
+        <nitem  name = "invout_1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "AND2_t2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        <pitem  name = "B"  direction = "in"  />
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "wren_i"  />
+        <nitem  name = "rden_i_inv"  />
+        <nitem  name = "cnt_con"  />
+        </nets>
+    </instance>
+
+    <instance  name = "XOR2_t1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        <pitem  name = "B"  direction = "in"  />
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "wren_i"  />
+        <nitem  name = "rden_i"  />
+        <nitem  name = "fcnt_en"  />
+        </nets>
+    </instance>
+
+    <instance  name = "INV_6"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "rden_i"  />
+        <nitem  name = "rden_i_inv"  />
+        </nets>
+    </instance>
+
+    <instance  name = "INV_5"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "wren_i"  />
+        <nitem  name = "wren_i_inv"  />
+        </nets>
+    </instance>
+
+    <instance  name = "LUT4_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "AD3"  direction = "in"  />
+        <pitem  name = "AD2"  direction = "in"  />
+        <pitem  name = "AD1"  direction = "in"  />
+        <pitem  name = "AD0"  direction = "in"  />
+        <pitem  name = "DO0"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "cmp_le_1"  />
+        <nitem  name = "wren_i"  />
+        <nitem  name = "Empty"  />
+        <nitem  name = "empty_d"  />
+        </nets>
+    </instance>
+
+    <instance  name = "LUT4_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "AD3"  direction = "in"  />
+        <pitem  name = "AD2"  direction = "in"  />
+        <pitem  name = "AD1"  direction = "in"  />
+        <pitem  name = "AD0"  direction = "in"  />
+        <pitem  name = "DO0"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "cmp_ge_d1"  />
+        <nitem  name = "rden_i"  />
+        <nitem  name = "Full"  />
+        <nitem  name = "full_d"  />
+        </nets>
+    </instance>
+
+    <instance  name = "AND2_t0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        <pitem  name = "B"  direction = "in"  />
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "rden_i"  />
+        <nitem  name = "invout_0"  />
+        <nitem  name = "r_nw"  />
+        </nets>
+    </instance>
+
+    <instance  name = "INV_4"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "wren_i"  />
+        <nitem  name = "invout_0"  />
+        </nets>
+    </instance>
+
+    <instance  name = "INV_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "fcnt_en"  />
+        <nitem  name = "fcnt_en_inv"  />
+        </nets>
+    </instance>
+
+    <instance  name = "INV_2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "cnt_con"  />
+        <nitem  name = "cnt_con_inv"  />
+        </nets>
+    </instance>
+
+    <instance  name = "INV_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "r_nw"  />
+        </nets>
+    </instance>
+
+    <instance  name = "INV_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A"  direction = "in"  />
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "fcnt_en_inv"  />
+        <nitem  name = "fcnt_en_inv_inv"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pdp_ram_0_0_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "DIA17"  direction = "in"  />
+        <pitem  name = "DIA16"  direction = "in"  />
+        <pitem  name = "DIA15"  direction = "in"  />
+        <pitem  name = "DIA14"  direction = "in"  />
+        <pitem  name = "DIA13"  direction = "in"  />
+        <pitem  name = "DIA12"  direction = "in"  />
+        <pitem  name = "DIA11"  direction = "in"  />
+        <pitem  name = "DIA10"  direction = "in"  />
+        <pitem  name = "DIA9"  direction = "in"  />
+        <pitem  name = "DIA8"  direction = "in"  />
+        <pitem  name = "DIA7"  direction = "in"  />
+        <pitem  name = "DIA6"  direction = "in"  />
+        <pitem  name = "DIA5"  direction = "in"  />
+        <pitem  name = "DIA4"  direction = "in"  />
+        <pitem  name = "DIA3"  direction = "in"  />
+        <pitem  name = "DIA2"  direction = "in"  />
+        <pitem  name = "DIA1"  direction = "in"  />
+        <pitem  name = "DIA0"  direction = "in"  />
+        <pitem  name = "ADA13"  direction = "in"  />
+        <pitem  name = "ADA12"  direction = "in"  />
+        <pitem  name = "ADA11"  direction = "in"  />
+        <pitem  name = "ADA10"  direction = "in"  />
+        <pitem  name = "ADA9"  direction = "in"  />
+        <pitem  name = "ADA8"  direction = "in"  />
+        <pitem  name = "ADA7"  direction = "in"  />
+        <pitem  name = "ADA6"  direction = "in"  />
+        <pitem  name = "ADA5"  direction = "in"  />
+        <pitem  name = "ADA4"  direction = "in"  />
+        <pitem  name = "ADA3"  direction = "in"  />
+        <pitem  name = "ADA2"  direction = "in"  />
+        <pitem  name = "ADA1"  direction = "in"  />
+        <pitem  name = "ADA0"  direction = "in"  />
+        <pitem  name = "CEA"  direction = "in"  />
+        <pitem  name = "OCEA"  direction = "in"  />
+        <pitem  name = "CLKA"  direction = "in"  />
+        <pitem  name = "WEA"  direction = "in"  />
+        <pitem  name = "CSA2"  direction = "in"  />
+        <pitem  name = "CSA1"  direction = "in"  />
+        <pitem  name = "CSA0"  direction = "in"  />
+        <pitem  name = "RSTA"  direction = "in"  />
+        <pitem  name = "DIB17"  direction = "in"  />
+        <pitem  name = "DIB16"  direction = "in"  />
+        <pitem  name = "DIB15"  direction = "in"  />
+        <pitem  name = "DIB14"  direction = "in"  />
+        <pitem  name = "DIB13"  direction = "in"  />
+        <pitem  name = "DIB12"  direction = "in"  />
+        <pitem  name = "DIB11"  direction = "in"  />
+        <pitem  name = "DIB10"  direction = "in"  />
+        <pitem  name = "DIB9"  direction = "in"  />
+        <pitem  name = "DIB8"  direction = "in"  />
+        <pitem  name = "DIB7"  direction = "in"  />
+        <pitem  name = "DIB6"  direction = "in"  />
+        <pitem  name = "DIB5"  direction = "in"  />
+        <pitem  name = "DIB4"  direction = "in"  />
+        <pitem  name = "DIB3"  direction = "in"  />
+        <pitem  name = "DIB2"  direction = "in"  />
+        <pitem  name = "DIB1"  direction = "in"  />
+        <pitem  name = "DIB0"  direction = "in"  />
+        <pitem  name = "ADB13"  direction = "in"  />
+        <pitem  name = "ADB12"  direction = "in"  />
+        <pitem  name = "ADB11"  direction = "in"  />
+        <pitem  name = "ADB10"  direction = "in"  />
+        <pitem  name = "ADB9"  direction = "in"  />
+        <pitem  name = "ADB8"  direction = "in"  />
+        <pitem  name = "ADB7"  direction = "in"  />
+        <pitem  name = "ADB6"  direction = "in"  />
+        <pitem  name = "ADB5"  direction = "in"  />
+        <pitem  name = "ADB4"  direction = "in"  />
+        <pitem  name = "ADB3"  direction = "in"  />
+        <pitem  name = "ADB2"  direction = "in"  />
+        <pitem  name = "ADB1"  direction = "in"  />
+        <pitem  name = "ADB0"  direction = "in"  />
+        <pitem  name = "CEB"  direction = "in"  />
+        <pitem  name = "OCEB"  direction = "in"  />
+        <pitem  name = "CLKB"  direction = "in"  />
+        <pitem  name = "WEB"  direction = "in"  />
+        <pitem  name = "CSB2"  direction = "in"  />
+        <pitem  name = "CSB1"  direction = "in"  />
+        <pitem  name = "CSB0"  direction = "in"  />
+        <pitem  name = "RSTB"  direction = "in"  />
+        <pitem  name = "DOB15"  direction = "out"  />
+        <pitem  name = "DOB14"  direction = "out"  />
+        <pitem  name = "DOB13"  direction = "out"  />
+        <pitem  name = "DOB12"  direction = "out"  />
+        <pitem  name = "DOB11"  direction = "out"  />
+        <pitem  name = "DOB10"  direction = "out"  />
+        <pitem  name = "DOB9"  direction = "out"  />
+        <pitem  name = "DOB8"  direction = "out"  />
+        <pitem  name = "DOB7"  direction = "out"  />
+        <pitem  name = "DOB6"  direction = "out"  />
+        <pitem  name = "DOB5"  direction = "out"  />
+        <pitem  name = "DOB4"  direction = "out"  />
+        <pitem  name = "DOB3"  direction = "out"  />
+        <pitem  name = "DOB2"  direction = "out"  />
+        <pitem  name = "DOB1"  direction = "out"  />
+        <pitem  name = "DOB0"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "Data[15]"  />
+        <nitem  name = "Data[14]"  />
+        <nitem  name = "Data[13]"  />
+        <nitem  name = "Data[12]"  />
+        <nitem  name = "Data[11]"  />
+        <nitem  name = "Data[10]"  />
+        <nitem  name = "Data[9]"  />
+        <nitem  name = "Data[8]"  />
+        <nitem  name = "Data[7]"  />
+        <nitem  name = "Data[6]"  />
+        <nitem  name = "Data[5]"  />
+        <nitem  name = "Data[4]"  />
+        <nitem  name = "Data[3]"  />
+        <nitem  name = "Data[2]"  />
+        <nitem  name = "Data[1]"  />
+        <nitem  name = "Data[0]"  />
+        <nitem  name = "wcount_6"  />
+        <nitem  name = "wcount_5"  />
+        <nitem  name = "wcount_4"  />
+        <nitem  name = "wcount_3"  />
+        <nitem  name = "wcount_2"  />
+        <nitem  name = "wcount_1"  />
+        <nitem  name = "wcount_0"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "wren_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "rcount_6"  />
+        <nitem  name = "rcount_5"  />
+        <nitem  name = "rcount_4"  />
+        <nitem  name = "rcount_3"  />
+        <nitem  name = "rcount_2"  />
+        <nitem  name = "rcount_1"  />
+        <nitem  name = "rcount_0"  />
+        <nitem  name = "rden_i"  />
+        <nitem  name = "Q[15]"  />
+        <nitem  name = "Q[14]"  />
+        <nitem  name = "Q[13]"  />
+        <nitem  name = "Q[12]"  />
+        <nitem  name = "Q[11]"  />
+        <nitem  name = "Q[10]"  />
+        <nitem  name = "Q[9]"  />
+        <nitem  name = "Q[8]"  />
+        <nitem  name = "Q[7]"  />
+        <nitem  name = "Q[6]"  />
+        <nitem  name = "Q[5]"  />
+        <nitem  name = "Q[4]"  />
+        <nitem  name = "Q[3]"  />
+        <nitem  name = "Q[2]"  />
+        <nitem  name = "Q[1]"  />
+        <nitem  name = "Q[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_26"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ifcount_0"  />
+        <nitem  name = "fcnt_en"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "fcount_0"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_25"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ifcount_1"  />
+        <nitem  name = "fcnt_en"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "fcount_1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_24"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ifcount_2"  />
+        <nitem  name = "fcnt_en"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "fcount_2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_23"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ifcount_3"  />
+        <nitem  name = "fcnt_en"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "fcount_3"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_22"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ifcount_4"  />
+        <nitem  name = "fcnt_en"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "fcount_4"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_21"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ifcount_5"  />
+        <nitem  name = "fcnt_en"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "fcount_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_20"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ifcount_6"  />
+        <nitem  name = "fcnt_en"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "fcount_6"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_19"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ifcount_7"  />
+        <nitem  name = "fcnt_en"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "fcount_7"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_18"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "PD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "empty_d"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "Empty"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_17"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "full_d"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "Full"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_16"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "iwcount_0"  />
+        <nitem  name = "wren_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "wcount_0"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_15"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "iwcount_1"  />
+        <nitem  name = "wren_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "wcount_1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_14"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "iwcount_2"  />
+        <nitem  name = "wren_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "wcount_2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_13"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "iwcount_3"  />
+        <nitem  name = "wren_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "wcount_3"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_12"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "iwcount_4"  />
+        <nitem  name = "wren_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "wcount_4"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_11"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "iwcount_5"  />
+        <nitem  name = "wren_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "wcount_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_10"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "iwcount_6"  />
+        <nitem  name = "wren_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "wcount_6"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_9"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "iwcount_7"  />
+        <nitem  name = "wren_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "wcount_7"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_8"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ircount_0"  />
+        <nitem  name = "rden_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "rcount_0"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_7"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ircount_1"  />
+        <nitem  name = "rden_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "rcount_1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_6"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ircount_2"  />
+        <nitem  name = "rden_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "rcount_2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_5"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ircount_3"  />
+        <nitem  name = "rden_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "rcount_3"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_4"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ircount_4"  />
+        <nitem  name = "rden_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "rcount_4"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ircount_5"  />
+        <nitem  name = "rden_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "rcount_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ircount_6"  />
+        <nitem  name = "rden_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "rcount_6"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "SP"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ircount_7"  />
+        <nitem  name = "rden_i"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "rcount_7"  />
+        </nets>
+    </instance>
+
+    <instance  name = "FF_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "D"  direction = "in"  />
+        <pitem  name = "CK"  direction = "in"  />
+        <pitem  name = "CD"  direction = "in"  />
+        <pitem  name = "Q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "af_d"  />
+        <nitem  name = "Clock"  />
+        <nitem  name = "Reset"  />
+        <nitem  name = "AlmostFull"  />
+        </nets>
+    </instance>
+
+    <instance  name = "bdcnt_bctr_cia"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "cnt_con"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "bdcnt_bctr_ci"  />
+        </nets>
+    </instance>
+
+    <instance  name = "bdcnt_bctr_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        <pitem  name = "S1"  direction = "out"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "fcount_0"  />
+        <nitem  name = "fcount_1"  />
+        <nitem  name = "cnt_con"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "bdcnt_bctr_ci"  />
+        <nitem  name = "ifcount_0"  />
+        <nitem  name = "ifcount_1"  />
+        <nitem  name = "co0"  />
+        </nets>
+    </instance>
+
+    <instance  name = "bdcnt_bctr_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        <pitem  name = "S1"  direction = "out"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "fcount_2"  />
+        <nitem  name = "fcount_3"  />
+        <nitem  name = "cnt_con"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co0"  />
+        <nitem  name = "ifcount_2"  />
+        <nitem  name = "ifcount_3"  />
+        <nitem  name = "co1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "bdcnt_bctr_2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        <pitem  name = "S1"  direction = "out"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "fcount_4"  />
+        <nitem  name = "fcount_5"  />
+        <nitem  name = "cnt_con"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co1"  />
+        <nitem  name = "ifcount_4"  />
+        <nitem  name = "ifcount_5"  />
+        <nitem  name = "co2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "bdcnt_bctr_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        <pitem  name = "S1"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "fcount_6"  />
+        <nitem  name = "fcount_7"  />
+        <nitem  name = "cnt_con"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co2"  />
+        <nitem  name = "ifcount_6"  />
+        <nitem  name = "ifcount_7"  />
+        </nets>
+    </instance>
+
+    <instance  name = "e_cmp_ci_a"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "cmp_ci"  />
+        </nets>
+    </instance>
+
+    <instance  name = "e_cmp_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "rden_i"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "fcount_0"  />
+        <nitem  name = "fcount_1"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "cmp_ci"  />
+        <nitem  name = "co0_1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "e_cmp_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "fcount_2"  />
+        <nitem  name = "fcount_3"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co0_1"  />
+        <nitem  name = "co1_1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "e_cmp_2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "fcount_4"  />
+        <nitem  name = "fcount_5"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co1_1"  />
+        <nitem  name = "co2_1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "e_cmp_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "fcount_6"  />
+        <nitem  name = "fcount_7"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co2_1"  />
+        <nitem  name = "cmp_le_1_c"  />
+        </nets>
+    </instance>
+
+    <instance  name = "a0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "cmp_le_1_c"  />
+        <nitem  name = "cmp_le_1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "g_cmp_ci_a"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "cmp_ci_1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "g_cmp_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "fcount_0"  />
+        <nitem  name = "fcount_1"  />
+        <nitem  name = "wren_i"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "cmp_ci_1"  />
+        <nitem  name = "co0_2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "g_cmp_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "fcount_2"  />
+        <nitem  name = "fcount_3"  />
+        <nitem  name = "wren_i"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co0_2"  />
+        <nitem  name = "co1_2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "g_cmp_2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "fcount_4"  />
+        <nitem  name = "fcount_5"  />
+        <nitem  name = "wren_i"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co1_2"  />
+        <nitem  name = "co2_2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "g_cmp_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "fcount_6"  />
+        <nitem  name = "fcount_7"  />
+        <nitem  name = "wren_i"  />
+        <nitem  name = "wren_i_inv"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co2_2"  />
+        <nitem  name = "cmp_ge_d1_c"  />
+        </nets>
+    </instance>
+
+    <instance  name = "a1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "cmp_ge_d1_c"  />
+        <nitem  name = "cmp_ge_d1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "w_ctr_cia"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "w_ctr_ci"  />
+        </nets>
+    </instance>
+
+    <instance  name = "w_ctr_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        <pitem  name = "S1"  direction = "out"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "wcount_0"  />
+        <nitem  name = "wcount_1"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "w_ctr_ci"  />
+        <nitem  name = "iwcount_0"  />
+        <nitem  name = "iwcount_1"  />
+        <nitem  name = "co0_3"  />
+        </nets>
+    </instance>
+
+    <instance  name = "w_ctr_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        <pitem  name = "S1"  direction = "out"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "wcount_2"  />
+        <nitem  name = "wcount_3"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co0_3"  />
+        <nitem  name = "iwcount_2"  />
+        <nitem  name = "iwcount_3"  />
+        <nitem  name = "co1_3"  />
+        </nets>
+    </instance>
+
+    <instance  name = "w_ctr_2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        <pitem  name = "S1"  direction = "out"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "wcount_4"  />
+        <nitem  name = "wcount_5"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co1_3"  />
+        <nitem  name = "iwcount_4"  />
+        <nitem  name = "iwcount_5"  />
+        <nitem  name = "co2_3"  />
+        </nets>
+    </instance>
+
+    <instance  name = "w_ctr_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        <pitem  name = "S1"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "wcount_6"  />
+        <nitem  name = "wcount_7"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co2_3"  />
+        <nitem  name = "iwcount_6"  />
+        <nitem  name = "iwcount_7"  />
+        </nets>
+    </instance>
+
+    <instance  name = "r_ctr_cia"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "r_ctr_ci"  />
+        </nets>
+    </instance>
+
+    <instance  name = "r_ctr_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        <pitem  name = "S1"  direction = "out"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "rcount_0"  />
+        <nitem  name = "rcount_1"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "r_ctr_ci"  />
+        <nitem  name = "ircount_0"  />
+        <nitem  name = "ircount_1"  />
+        <nitem  name = "co0_4"  />
+        </nets>
+    </instance>
+
+    <instance  name = "r_ctr_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        <pitem  name = "S1"  direction = "out"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "rcount_2"  />
+        <nitem  name = "rcount_3"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co0_4"  />
+        <nitem  name = "ircount_2"  />
+        <nitem  name = "ircount_3"  />
+        <nitem  name = "co1_4"  />
+        </nets>
+    </instance>
+
+    <instance  name = "r_ctr_2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        <pitem  name = "S1"  direction = "out"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "rcount_4"  />
+        <nitem  name = "rcount_5"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co1_4"  />
+        <nitem  name = "ircount_4"  />
+        <nitem  name = "ircount_5"  />
+        <nitem  name = "co2_4"  />
+        </nets>
+    </instance>
+
+    <instance  name = "r_ctr_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        <pitem  name = "S1"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "rcount_6"  />
+        <nitem  name = "rcount_7"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co2_4"  />
+        <nitem  name = "ircount_6"  />
+        <nitem  name = "ircount_7"  />
+        </nets>
+    </instance>
+
+    <instance  name = "af_cmp_ci_a"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "cmp_ci_2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "af_cmp_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "fcount_0"  />
+        <nitem  name = "fcount_1"  />
+        <nitem  name = "fcnt_en_inv_inv"  />
+        <nitem  name = "cnt_con"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "cmp_ci_2"  />
+        <nitem  name = "co0_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "af_cmp_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "fcount_2"  />
+        <nitem  name = "fcount_3"  />
+        <nitem  name = "cnt_con_inv"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co0_5"  />
+        <nitem  name = "co1_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "af_cmp_2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "fcount_4"  />
+        <nitem  name = "fcount_5"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "co1_5"  />
+        <nitem  name = "co2_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "af_cmp_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "COUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "fcount_6"  />
+        <nitem  name = "fcount_7"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "co2_5"  />
+        <nitem  name = "af_d_c"  />
+        </nets>
+    </instance>
+
+    <instance  name = "scuba_vhi_inst"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vhi"  />
+        </nets>
+    </instance>
+
+    <instance  name = "scuba_vlo_inst"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "Z"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vlo"  />
+        </nets>
+    </instance>
+
+    <instance  name = "a2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "A0"  direction = "in"  />
+        <pitem  name = "A1"  direction = "in"  />
+        <pitem  name = "B0"  direction = "in"  />
+        <pitem  name = "B1"  direction = "in"  />
+        <pitem  name = "C0"  direction = "in"  />
+        <pitem  name = "C1"  direction = "in"  />
+        <pitem  name = "D0"  direction = "in"  />
+        <pitem  name = "D1"  direction = "in"  />
+        <pitem  name = "CIN"  direction = "in"  />
+        <pitem  name = "S0"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "scuba_vlo"  />
+        <nitem  name = "scuba_vhi"  />
+        <nitem  name = "af_d_c"  />
+        <nitem  name = "af_d"  />
+        </nets>
+    </instance>
+
+    <!--
+        Views in design "aud_buffer": 0
+    -->
+
+    <views>
+    </views>
+
+</unit>
+
+</library>
+
+</top>

@@ -1,0 +1,3 @@
+Results of NGD DRC are available in pll_clk_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file G:/cypress_prj/interlaced_new/interlaced_rtl/compare/HDMI_Rx_cypress/HDMI_RX_FHD_CUST/IP/ddr_ip/pll_clk/pll_clk.ngo.

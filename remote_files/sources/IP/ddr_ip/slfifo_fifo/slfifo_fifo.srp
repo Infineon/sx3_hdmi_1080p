@@ -1,0 +1,40 @@
+SCUBA, Version Diamond (64-bit) 3.11.0.396.4
+Fri Jan 08 13:28:29 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+    Issued command   : C:\lscc\diamond\3.11_x64\ispfpga\bin\nt64\scuba.exe -w -n slfifo_fifo -lang verilog -synth lse -bus_exp 7 -bb -arch sa5p00 -type ebfifo -depth 512 -width 64 -rwidth 32 -regout -no_enable -sync_reset -pe 10 -pe2 11 -pf 488 -rfill -fill -fdc F:/cypress_prj/FTP/HDMI_RX_FPGA_design_FULLHD/PAR/ddr_ip/slfifo_fifo/slfifo_fifo.fdc 
+    Circuit name     : slfifo_fifo
+    Module type      : ebfifo
+    Module Version   : 5.8
+    Ports            : 
+	Inputs       : Data[63:0], WrClock, RdClock, WrEn, RdEn, Reset, RPReset
+	Outputs      : Q[31:0], WCNT[9:0], RCNT[10:0], Empty, Full, AlmostEmpty, AlmostFull
+    I/O buffer       : not inserted
+    EDIF output      : slfifo_fifo.edn
+    Verilog output   : slfifo_fifo.v
+    Verilog template : slfifo_fifo_tmpl.v
+    Verilog testbench: tb_slfifo_fifo_tmpl.v
+    Verilog purpose  : for synthesis and simulation
+    Bus notation     : big endian
+    Report output    : slfifo_fifo.srp
+    Element Usage    :
+          CCU2C : 86
+           AND2 : 2
+        FD1P3BX : 10
+        FD1P3DX : 85
+        FD1S3BX : 2
+        FD1S3DX : 65
+            INV : 2
+            OR2 : 1
+       ROM16X1A : 33
+           XOR2 : 21
+       PDPW16KD : 2
+    Estimated Resource Usage:
+            LUT : 229
+            EBR : 2
+            Reg : 162

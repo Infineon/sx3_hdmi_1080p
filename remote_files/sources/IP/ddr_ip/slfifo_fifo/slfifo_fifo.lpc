@@ -1,0 +1,53 @@
+[Device]
+Family=ecp5u
+PartType=LFE5U-45F
+PartName=LFE5U-45F-8BG381I
+SpeedGrade=8
+Package=CABGA381
+OperatingCondition=IND
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=FIFO_DC
+CoreRevision=5.8
+ModuleName=slfifo_fifo
+SourceFormat=verilog
+ParameterFileVersion=1.0
+Date=01/08/2021
+Time=13:28:28
+
+[Parameters]
+Verilog=1
+VHDL=0
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+FIFOImp=EBR Based
+Depth=512
+Width=64
+RDepth=1024
+RWidth=32
+regout=1
+ClockEn=0
+CtrlByRdEn=0
+EmpFlg=1
+PeMode=Static - Dual Threshold
+PeAssert=10
+PeDeassert=11
+FullFlg=1
+PfMode=Static - Single Threshold
+PfAssert=488
+PfDeassert=299
+Reset=Sync
+Reset1=Sync
+RDataCount=1
+WDataCount=1
+EnECC=0
+
+[Command]
+cmd_line= -w -n slfifo_fifo -lang verilog -synth lse -bus_exp 7 -bb -arch sa5p00 -type ebfifo -depth 512 -width 64 -rwidth 32 -regout -no_enable -sync_reset -pe 10 -pe2 11 -pf 488 -rfill -fill

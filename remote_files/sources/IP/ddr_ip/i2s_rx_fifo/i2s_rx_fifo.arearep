@@ -1,0 +1,19 @@
+----------------------------------------------------------------------
+Report for cell i2s_rx_fifo.TECH
+Register bits:  171 of 44457 (0.385%)
+I/O cells:      0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               AND2         2          100.0
+                              CCU2C        76          100.0
+                             DP16KD         4          100.0
+                            FD1P3BX         9          100.0
+                            FD1P3DX        87          100.0
+                            FD1S3BX         2          100.0
+                            FD1S3DX        73          100.0
+                                GSR         1          100.0
+                                INV         2          100.0
+                                OR2         1          100.0
+                           ROM16X1A        37          100.0
+                               XOR2        24          100.0
+                              TOTAL       318

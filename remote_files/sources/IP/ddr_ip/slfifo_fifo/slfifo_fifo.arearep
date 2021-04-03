@@ -1,0 +1,19 @@
+----------------------------------------------------------------------
+Report for cell slfifo_fifo.TECH
+Register bits:  159 of 44457 (0.358%)
+I/O cells:      0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               AND2         2          100.0
+                              CCU2C        85          100.0
+                            FD1P3BX        10          100.0
+                            FD1P3DX        84          100.0
+                            FD1S3BX         2          100.0
+                            FD1S3DX        63          100.0
+                                GSR         1          100.0
+                                INV         2          100.0
+                                OR2         1          100.0
+                           PDPW16KD         2          100.0
+                           ROM16X1A        31          100.0
+                               XOR2        20          100.0
+                              TOTAL       303

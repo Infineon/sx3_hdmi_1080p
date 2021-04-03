@@ -1,0 +1,27 @@
+SCUBA, Version Diamond (64-bit) 3.11.2.446
+Fri Apr 02 13:51:08 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+    Issued command   : C:\lattice_diamond\diamond\3.11_x64\ispfpga\bin\nt64\scuba.exe -w -n pll_clk -lang verilog -synth lse -bus_exp 7 -bb -arch sa5p00 -type pll -fin 100.00 -clkibuf LVDS -fclkop 100 -fclkop_tol 0.0 -fclkos 100 -fclkos_tol 0.0 -phases 0 -phase_cntl STATIC -lock -sticky -fb_mode 1 -fdc G:/cypress_prj/interlaced_new/interlaced_rtl/compare/HDMI_Rx_cypress/HDMI_RX_FHD_CUST/IP/ddr_ip/pll_clk/pll_clk.fdc 
+    Circuit name     : pll_clk
+    Module type      : pll
+    Module Version   : 5.7
+    Ports            : 
+	Inputs       : CLKI
+	Outputs      : CLKOP, CLKOS, LOCK
+    I/O buffer       : not inserted
+    EDIF output      : pll_clk.edn
+    Verilog output   : pll_clk.v
+    Verilog template : pll_clk_tmpl.v
+    Verilog purpose  : for synthesis and simulation
+    Bus notation     : big endian
+    Report output    : pll_clk.srp
+    Element Usage    :
+        EHXPLLL : 1
+             IB : 1
+    Estimated Resource Usage:

@@ -1,0 +1,747 @@
+<!DOCTYPE aud_buf>
+<lattice:project>
+    <spirit:component>
+        <spirit:vendor>LATTICE</spirit:vendor>
+        <spirit:library>LOCAL</spirit:library>
+        <spirit:name>aud_buf</spirit:name>
+        <spirit:version>1.0</spirit:version>
+        <spirit:fileSets>
+            <spirit:fileset>
+                <spirit:name>Diamond_Synthesis</spirit:name>
+                <spirit:group>synthesis</spirit:group>
+                <spirit:file>
+                    <spirit:name>./aud_buf.v</spirit:name>
+                    <spirit:fileType>verilogSource</spirit:fileType>
+                </spirit:file>
+            </spirit:fileset>
+            <spirit:fileset>
+                <spirit:name>Diamond_Simulation</spirit:name>
+                <spirit:group>simulation</spirit:group>
+                <spirit:file>
+                    <spirit:name>./aud_buf.v</spirit:name>
+                    <spirit:fileType>verilogSource</spirit:fileType>
+                </spirit:file>
+            </spirit:fileset>
+        </spirit:fileSets>
+        <spirit:componentGenerators/>
+        <spirit:model>
+            <spirit:views/>
+            <spirit:ports>
+                <spirit:port>
+                    <spirit:name>aud_buffer_AlmostFull</spirit:name>
+                    <spirit:displayName>aud_buffer_AlmostFull</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>out</spirit:direction>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">aud_buffer.AlmostFull</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+                <spirit:port>
+                    <spirit:name>aud_buffer_Clock</spirit:name>
+                    <spirit:displayName>aud_buffer_Clock</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>in</spirit:direction>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">aud_buffer.Clock</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+                <spirit:port>
+                    <spirit:name>aud_buffer_Empty</spirit:name>
+                    <spirit:displayName>aud_buffer_Empty</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>out</spirit:direction>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">aud_buffer.Empty</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+                <spirit:port>
+                    <spirit:name>aud_buffer_Full</spirit:name>
+                    <spirit:displayName>aud_buffer_Full</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>out</spirit:direction>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">aud_buffer.Full</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+                <spirit:port>
+                    <spirit:name>aud_buffer_RdEn</spirit:name>
+                    <spirit:displayName>aud_buffer_RdEn</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>in</spirit:direction>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">aud_buffer.RdEn</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+                <spirit:port>
+                    <spirit:name>aud_buffer_Reset</spirit:name>
+                    <spirit:displayName>aud_buffer_Reset</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>in</spirit:direction>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">aud_buffer.Reset</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+                <spirit:port>
+                    <spirit:name>aud_buffer_WrEn</spirit:name>
+                    <spirit:displayName>aud_buffer_WrEn</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>in</spirit:direction>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">aud_buffer.WrEn</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+                <spirit:port>
+                    <spirit:name>aud_buffer_Data</spirit:name>
+                    <spirit:displayName>aud_buffer_Data</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>in</spirit:direction>
+                        <spirit:vector>
+                            <spirit:left>15</spirit:left>
+                            <spirit:right>0</spirit:right>
+                        </spirit:vector>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">aud_buffer.Data</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+                <spirit:port>
+                    <spirit:name>aud_buffer_Q</spirit:name>
+                    <spirit:displayName>aud_buffer_Q</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>out</spirit:direction>
+                        <spirit:vector>
+                            <spirit:left>15</spirit:left>
+                            <spirit:right>0</spirit:right>
+                        </spirit:vector>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">aud_buffer.Q</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+            </spirit:ports>
+        </spirit:model>
+        <spirit:vendorExtensions>
+            <lattice:device>LFE5U-45F-8BG381I</lattice:device>
+            <lattice:synthesis>lse</lattice:synthesis>
+            <lattice:date>2021-03-05.10:41:13</lattice:date>
+            <lattice:modified>2021-03-09.16:14:09</lattice:modified>
+            <lattice:diamond>3.11.2.446</lattice:diamond>
+            <lattice:language>Verilog</lattice:language>
+            <lattice:attributes>
+                <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
+                <lattice:attribute lattice:name="Change4to5">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeConfig">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeConnect">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeDevice">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeLocate">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangePack">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangePart">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeSynthesis">false</lattice:attribute>
+                <lattice:attribute lattice:name="Migrate">false</lattice:attribute>
+                <lattice:attribute lattice:name="RemovedComponent">false</lattice:attribute>
+            </lattice:attributes>
+            <lattice:elements/>
+            <lattice:lpc/>
+            <lattice:groups/>
+        </spirit:vendorExtensions>
+    </spirit:component>
+    <spirit:design>
+        <spirit:vendor>LATTICE</spirit:vendor>
+        <spirit:library>LOCAL</spirit:library>
+        <spirit:name>aud_buf</spirit:name>
+        <spirit:version>1.0</spirit:version>
+        <spirit:componentInstances>
+            <spirit:componentInstance>
+                <spirit:instanceName>aud_buffer</spirit:instanceName>
+                <spirit:componentRef>
+                    <spirit:vendor>Lattice Semiconductor Corporation</spirit:vendor>
+                    <spirit:library>LEGACY</spirit:library>
+                    <spirit:name>FIFO</spirit:name>
+                    <spirit:version>5.1</spirit:version>
+                    <spirit:fileSets>
+                        <spirit:fileset>
+                            <spirit:name>Diamond_Simulation</spirit:name>
+                            <spirit:group>simulation</spirit:group>
+                            <spirit:file>
+                                <spirit:name>./aud_buffer/aud_buffer.v</spirit:name>
+                                <spirit:fileType>verilogSource</spirit:fileType>
+                            </spirit:file>
+                        </spirit:fileset>
+                        <spirit:fileset>
+                            <spirit:name>Diamond_Synthesis</spirit:name>
+                            <spirit:group>synthesis</spirit:group>
+                            <spirit:file>
+                                <spirit:name>./aud_buffer/aud_buffer.v</spirit:name>
+                                <spirit:fileType>verilogSource</spirit:fileType>
+                            </spirit:file>
+                        </spirit:fileset>
+                    </spirit:fileSets>
+                    <spirit:componentGenerators>
+                        <spirit:componentGenerator spirit:hidden="true" spirit:scope="instance">
+                            <spirit:name>Configuration</spirit:name>
+                            <spirit:apiType>none</spirit:apiType>
+                            <spirit:generatorExe>${sbp_path}/${instance}/generate_core.tcl</spirit:generatorExe>
+                            <spirit:group>CONFIG</spirit:group>
+                        </spirit:componentGenerator>
+                        <spirit:componentGenerator spirit:hidden="true" spirit:scope="instance">
+                            <spirit:name>CreateNGD</spirit:name>
+                            <spirit:apiType>none</spirit:apiType>
+                            <spirit:generatorExe>${sbp_path}/${instance}/generate_ngd.tcl</spirit:generatorExe>
+                            <spirit:group>CONFIG</spirit:group>
+                        </spirit:componentGenerator>
+                    </spirit:componentGenerators>
+                    <spirit:model>
+                        <spirit:views/>
+                        <spirit:ports>
+                            <spirit:port>
+                                <spirit:name>AlmostFull</spirit:name>
+                                <spirit:displayName>AlmostFull</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>out</spirit:direction>
+                                </spirit:wire>
+                            </spirit:port>
+                            <spirit:port>
+                                <spirit:name>Clock</spirit:name>
+                                <spirit:displayName>Clock</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>in</spirit:direction>
+                                </spirit:wire>
+                            </spirit:port>
+                            <spirit:port>
+                                <spirit:name>Empty</spirit:name>
+                                <spirit:displayName>Empty</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>out</spirit:direction>
+                                </spirit:wire>
+                            </spirit:port>
+                            <spirit:port>
+                                <spirit:name>Full</spirit:name>
+                                <spirit:displayName>Full</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>out</spirit:direction>
+                                </spirit:wire>
+                            </spirit:port>
+                            <spirit:port>
+                                <spirit:name>RdEn</spirit:name>
+                                <spirit:displayName>RdEn</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>in</spirit:direction>
+                                </spirit:wire>
+                            </spirit:port>
+                            <spirit:port>
+                                <spirit:name>Reset</spirit:name>
+                                <spirit:displayName>Reset</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>in</spirit:direction>
+                                </spirit:wire>
+                            </spirit:port>
+                            <spirit:port>
+                                <spirit:name>WrEn</spirit:name>
+                                <spirit:displayName>WrEn</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>in</spirit:direction>
+                                </spirit:wire>
+                            </spirit:port>
+                            <spirit:port>
+                                <spirit:name>Data</spirit:name>
+                                <spirit:displayName>Data</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>in</spirit:direction>
+                                    <spirit:vector>
+                                        <spirit:left>15</spirit:left>
+                                        <spirit:right>0</spirit:right>
+                                    </spirit:vector>
+                                </spirit:wire>
+                            </spirit:port>
+                            <spirit:port>
+                                <spirit:name>Q</spirit:name>
+                                <spirit:displayName>Q</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>out</spirit:direction>
+                                    <spirit:vector>
+                                        <spirit:left>15</spirit:left>
+                                        <spirit:right>0</spirit:right>
+                                    </spirit:vector>
+                                </spirit:wire>
+                            </spirit:port>
+                        </spirit:ports>
+                    </spirit:model>
+                    <spirit:vendorExtensions>
+                        <lattice:synthesis>lse</lattice:synthesis>
+                        <lattice:modified>2021-03-09.16:14:09</lattice:modified>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
+                            <lattice:attribute lattice:name="BBox">false</lattice:attribute>
+                            <lattice:attribute lattice:name="Change4to5">false</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangeConfig">false</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangeConnect">false</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangeDevice">false</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangeLocate">false</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangePack">false</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangePart">false</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangeSynthesis">false</lattice:attribute>
+                            <lattice:attribute lattice:name="CoreType">LPM</lattice:attribute>
+                            <lattice:attribute lattice:name="DCU_RXREFCLK">PRIMARY</lattice:attribute>
+                            <lattice:attribute lattice:name="DCU_TXREFCLK">PRIMARY</lattice:attribute>
+                            <lattice:attribute lattice:name="Migrate">false</lattice:attribute>
+                            <lattice:attribute lattice:name="RemovedComponent">false</lattice:attribute>
+                        </lattice:attributes>
+                        <lattice:elements/>
+                        <lattice:lpc>
+                            <lattice:lpcsection lattice:name="Device"/>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Family</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">ecp5u</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>OperatingCondition</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">IND</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Package</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">CABGA381</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>PartName</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">LFE5U-45F-8BG381I</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>PartType</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">LFE5U-45F</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>SpeedGrade</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">8</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Status</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">S</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcsection lattice:name="IP"/>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>CoreName</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">FIFO</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>CoreRevision</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">5.1</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>CoreStatus</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Demo</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>CoreType</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">LPM</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Date</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">03/09/2021</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>ModuleName</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">aud_buffer</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>ParameterFileVersion</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">1.0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>SourceFormat</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">verilog</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Time</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">16:14:06</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>VendorName</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Lattice Semiconductor Corporation</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcsection lattice:name="Parameters"/>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>CtrlByRdEn</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Depth</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">128</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Destination</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Synplicity</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>EDIF</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">1</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>EmpFlg</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>EnECC</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>EnFWFT</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Expression</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">BusA(0 to 7)</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>FIFOImp</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">EBR Based</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>FullFlg</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">1</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>IO</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Order</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Big Endian [MSB:LSB]</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>PeAssert</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">10</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>PeDeassert</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">12</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>PeMode</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Static - Dual Threshold</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>PfAssert</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">100</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>PfDeassert</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">506</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>PfMode</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Static - Single Threshold</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>RDataCount</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Reset</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Sync</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Reset1</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Sync</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>VHDL</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Verilog</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">1</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Width</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">16</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>regout</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">1</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcsection lattice:name="Command"/>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>cmd_line</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">-w -n aud_buffer -lang verilog -synth lse -bus_exp 7 -bb -arch sa5p00 -type ebfifo -sync_mode -depth 128 -width 16 -regout -no_enable -pe -1 -pf 100 -sync_reset</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                        </lattice:lpc>
+                        <lattice:groups/>
+                    </spirit:vendorExtensions>
+                </spirit:componentRef>
+            </spirit:componentInstance>
+        </spirit:componentInstances>
+        <spirit:adHocConnections>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_AlmostFull</spirit:name>
+                <spirit:displayName>aud_buffer_AlmostFull</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="AlmostFull" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_AlmostFull"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Clock</spirit:name>
+                <spirit:displayName>aud_buffer_Clock</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Clock" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Clock"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Empty</spirit:name>
+                <spirit:displayName>aud_buffer_Empty</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Empty" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Empty"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Full</spirit:name>
+                <spirit:displayName>aud_buffer_Full</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Full" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Full"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_RdEn</spirit:name>
+                <spirit:displayName>aud_buffer_RdEn</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="RdEn" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_RdEn"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Reset</spirit:name>
+                <spirit:displayName>aud_buffer_Reset</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Reset" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Reset"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_WrEn</spirit:name>
+                <spirit:displayName>aud_buffer_WrEn</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="WrEn" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_WrEn"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data</spirit:name>
+                <spirit:displayName>aud_buffer_Data</spirit:displayName>
+                <spirit:internalPortReference spirit:right="0" spirit:portRef="Data" spirit:componentRef="aud_buffer" spirit:left="15"/>
+                <spirit:externalPortReference spirit:right="0" spirit:portRef="aud_buffer_Data" spirit:left="15"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[0]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[0]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[0]"/>
+                <spirit:internalPortReference spirit:portRef="Data[0]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[10]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[10]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[10]"/>
+                <spirit:internalPortReference spirit:portRef="Data[10]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[11]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[11]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[11]"/>
+                <spirit:internalPortReference spirit:portRef="Data[11]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[12]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[12]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[12]"/>
+                <spirit:internalPortReference spirit:portRef="Data[12]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[13]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[13]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[13]"/>
+                <spirit:internalPortReference spirit:portRef="Data[13]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[14]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[14]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[14]"/>
+                <spirit:internalPortReference spirit:portRef="Data[14]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[15]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[15]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[15]"/>
+                <spirit:internalPortReference spirit:portRef="Data[15]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[1]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[1]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[1]"/>
+                <spirit:internalPortReference spirit:portRef="Data[1]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[2]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[2]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[2]"/>
+                <spirit:internalPortReference spirit:portRef="Data[2]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[3]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[3]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[3]"/>
+                <spirit:internalPortReference spirit:portRef="Data[3]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[4]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[4]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[4]"/>
+                <spirit:internalPortReference spirit:portRef="Data[4]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[5]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[5]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[5]"/>
+                <spirit:internalPortReference spirit:portRef="Data[5]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[6]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[6]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[6]"/>
+                <spirit:internalPortReference spirit:portRef="Data[6]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[7]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[7]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[7]"/>
+                <spirit:internalPortReference spirit:portRef="Data[7]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[8]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[8]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[8]"/>
+                <spirit:internalPortReference spirit:portRef="Data[8]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Data[9]</spirit:name>
+                <spirit:displayName>aud_buffer_Data[9]</spirit:displayName>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Data[9]"/>
+                <spirit:internalPortReference spirit:portRef="Data[9]" spirit:componentRef="aud_buffer"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q</spirit:name>
+                <spirit:displayName>aud_buffer_Q</spirit:displayName>
+                <spirit:internalPortReference spirit:right="0" spirit:portRef="Q" spirit:componentRef="aud_buffer" spirit:left="15"/>
+                <spirit:externalPortReference spirit:right="0" spirit:portRef="aud_buffer_Q" spirit:left="15"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[0]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[0]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[0]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[0]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[10]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[10]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[10]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[10]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[11]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[11]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[11]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[11]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[12]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[12]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[12]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[12]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[13]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[13]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[13]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[13]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[14]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[14]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[14]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[14]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[15]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[15]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[15]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[15]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[1]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[1]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[1]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[1]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[2]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[2]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[2]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[2]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[3]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[3]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[3]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[3]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[4]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[4]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[4]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[4]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[5]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[5]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[5]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[5]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[6]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[6]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[6]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[6]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[7]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[7]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[7]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[7]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[8]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[8]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[8]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[8]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>aud_buffer_Q[9]</spirit:name>
+                <spirit:displayName>aud_buffer_Q[9]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="Q[9]" spirit:componentRef="aud_buffer"/>
+                <spirit:externalPortReference spirit:portRef="aud_buffer_Q[9]"/>
+            </spirit:adHocConnection>
+        </spirit:adHocConnections>
+    </spirit:design>
+</lattice:project>

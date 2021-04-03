@@ -1,0 +1,204 @@
+synthesis:  version Diamond (64-bit) 3.11.2.446
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Tue Mar 09 16:14:07 2021
+
+
+Command Line:  C:\lscc\diamond\3.11_x64\ispfpga\bin\nt64\synthesis.exe -f aud_buffer.synproj -sdc F:/cypress_prj/HDMI_Rx_cypress/HDMI_RX_FPGA_design_FULLHD_Industrialgrade_192aud/PAR_aud_release/aud_buf/aud_buffer/aud_buffer.ldc -gui 
+
+Synthesis options:
+The -a option is ecp5u.
+The -s option is 8.
+The -t option is CABGA381.
+The -d option is LFE5U-45F.
+Using package CABGA381.
+Using performance grade 8.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-45F
+
+### Package : CABGA381
+
+### Speed   : 8
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = aud_buffer.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Use IO Insertion = FALSE
+Use IO Reg = FALSE (implied)
+WARNING - synthesis: Cannot pack registers into I/Os because use_io_insertion is FALSE.
+WARNING - synthesis: Ignoring user setting of use_io_reg. Value is set to FALSE.
+Use IO Reg = FALSE
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p F:/cypress_prj/HDMI_Rx_cypress/HDMI_RX_FPGA_design_FULLHD_Industrialgrade_192aud/PAR_aud_release/aud_buf/aud_buffer (searchpath added)
+Verilog design file = C:/lscc/diamond/3.11_x64/cae_library/synthesis/verilog/ecp5u.v
+Verilog design file = C:/lscc/diamond/3.11_x64/cae_library/synthesis/verilog/pmi_def.v
+Verilog design file = F:/cypress_prj/HDMI_Rx_cypress/HDMI_RX_FPGA_design_FULLHD_Industrialgrade_192aud/PAR_aud_release/aud_buf/aud_buffer/aud_buffer.v
+NGO file = F:/cypress_prj/HDMI_Rx_cypress/HDMI_RX_FPGA_design_FULLHD_Industrialgrade_192aud/PAR_aud_release/aud_buf/aud_buffer/aud_buffer.ngo
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+-sdc option: SDC file input is F:/cypress_prj/HDMI_Rx_cypress/HDMI_RX_FPGA_design_FULLHD_Industrialgrade_192aud/PAR_aud_release/aud_buf/aud_buffer/aud_buffer.ldc.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/lscc/diamond/3.11_x64/cae_library/synthesis/verilog/ecp5u.v. VERI-1482
+Analyzing Verilog file c:/lscc/diamond/3.11_x64/cae_library/synthesis/verilog/pmi_def.v. VERI-1482
+Analyzing Verilog file f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v. VERI-1482
+Analyzing Verilog file C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): aud_buffer
+INFO - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(8): compiling module aud_buffer. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(25): compiling module AND2. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(367): compiling module INV. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(810): compiling module XOR2. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(710): compiling module ROM16X1A(initval=16'b011001000110010). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(866): compiling module DP16KD(REGMODE_A="OUTREG",REGMODE_B="OUTREG"). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(119): compiling module FD1P3DX. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(160): compiling module FD1S3BX. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(168): compiling module FD1S3DX. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(76): compiling module CCU2C(INIT0=16'b0110011010101010,INIT1=16'b0110011010101010,INJECT1_0="NO",INJECT1_1="NO"). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(76): compiling module CCU2C(INIT0=16'b1001100110101010,INIT1=16'b1001100110101010,INJECT1_0="NO",INJECT1_1="NO"). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(757): compiling module VHI. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(761): compiling module VLO. VERI-1018
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(294): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(334): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(382): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(430): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(470): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(510): input port CIN is not connected on this instance. VDB-1013
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p45.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.43.
+WARNING - synthesis: There are no design constraints in the file F:/cypress_prj/HDMI_Rx_cypress/HDMI_RX_FPGA_design_FULLHD_Industrialgrade_192aud/PAR_aud_release/aud_buf/aud_buffer/aud_buffer.ldc
+Top-level module name = aud_buffer.
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(154): Removing unused instance INV_1. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(146): Removing unused instance AND2_t0. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(148): Removing unused instance INV_4. VDB-5034
+WARNING - synthesis: There are no design constraints in the file F:/cypress_prj/HDMI_Rx_cypress/HDMI_RX_FPGA_design_FULLHD_Industrialgrade_192aud/PAR_aud_release/aud_buf/aud_buffer/aud_buffer.ldc
+This ldc file was generated by Clarity Designer!
+
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(122): Removing unused instance _6. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(124): Removing unused instance _7. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(126): Removing unused instance _8. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(128): Removing unused instance _9. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(130): Removing unused instance _10. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(132): Removing unused instance _11. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(134): Removing unused instance _12. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(136): Removing unused instance _13. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(140): Removing unused instance _14. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(144): Removing unused instance _15. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(150): Removing unused instance _16. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(152): Removing unused instance _17. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(156): Removing unused instance _18. VDB-5034
+WARNING - synthesis: f:/cypress_prj/hdmi_rx_cypress/hdmi_rx_fpga_design_fullhd_industrialgrade_192aud/par_aud_release/aud_buf/aud_buffer/aud_buffer.v(195): Removing unused instance _19. VDB-5034
+######## Missing driver on net n184. Patching with GND.
+######## Missing driver on net n185. Patching with GND.
+######## Missing driver on net n183. Patching with GND.
+######## Missing driver on net n182. Patching with GND.
+######## Missing driver on net n186. Patching with GND.
+######## Missing driver on net n187. Patching with GND.
+
+
+
+######## GSR will not be inferred in an NGO flow, unless force_gsr=yes.
+WARNING - synthesis: There are no design constraints in the file aud_buffer_for_lpf.sdc
+Writing LPF file F:/cypress_prj/HDMI_Rx_cypress/HDMI_RX_FPGA_design_FULLHD_Industrialgrade_192aud/PAR_aud_release/aud_buf/aud_buffer/aud_buffer.lpf.
+Results of NGD DRC are available in aud_buffer_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file F:/cypress_prj/HDMI_Rx_cypress/HDMI_RX_FPGA_design_FULLHD_Industrialgrade_192aud/PAR_aud_release/aud_buf/aud_buffer/aud_buffer.ngo.
+
+################### Begin Area Report (aud_buffer)######################
+Number of register bits => 27 of 44457 (0 % )
+AND2 => 3
+CCU2C => 33
+DP16KD => 1
+FD1P3DX => 24
+FD1S3BX => 1
+FD1S3DX => 2
+GSR => 1
+INV => 7
+ROM16X1A => 2
+XOR2 => 1
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 0
+Clock Enable Nets
+Number of Clock Enables: 3
+Top 3 highest fanout Clock Enables:
+  Net : wren_i, loads : 21
+  Net : rden_i, loads : 13
+  Net : fcnt_en, loads : 9
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : wren_i, loads : 21
+  Net : rden_i, loads : 13
+  Net : cnt_con, loads : 12
+  Net : fcnt_en, loads : 9
+  Net : fcount_0, loads : 4
+  Net : fcount_1, loads : 4
+  Net : fcount_2, loads : 4
+  Net : fcount_3, loads : 4
+  Net : fcount_4, loads : 4
+  Net : fcount_5, loads : 4
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk500 [get_nets Clock]                 |  200.000 MHz|   93.537 MHz|    11 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 84.230  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 0.609  secs
+--------------------------------------------------------------

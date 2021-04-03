@@ -1,0 +1,1384 @@
+<!DOCTYPE hdmi_in>
+<lattice:project>
+    <spirit:component>
+        <spirit:vendor>LATTICE</spirit:vendor>
+        <spirit:library>LOCAL</spirit:library>
+        <spirit:name>hdmi_in</spirit:name>
+        <spirit:version>1.0</spirit:version>
+        <spirit:fileSets>
+            <spirit:fileset>
+                <spirit:name>Diamond_Synthesis</spirit:name>
+                <spirit:group>synthesis</spirit:group>
+                <spirit:file>
+                    <spirit:name>./hdmi_in.v</spirit:name>
+                    <spirit:fileType>verilogSource</spirit:fileType>
+                </spirit:file>
+            </spirit:fileset>
+            <spirit:fileset>
+                <spirit:name>Diamond_Simulation</spirit:name>
+                <spirit:group>simulation</spirit:group>
+                <spirit:file>
+                    <spirit:name>./hdmi_in.v</spirit:name>
+                    <spirit:fileType>verilogSource</spirit:fileType>
+                </spirit:file>
+            </spirit:fileset>
+        </spirit:fileSets>
+        <spirit:componentGenerators/>
+        <spirit:model>
+            <spirit:views/>
+            <spirit:ports>
+                <spirit:port>
+                    <spirit:name>ddr_in_clkin</spirit:name>
+                    <spirit:displayName>ddr_in_clkin</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>in</spirit:direction>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">ddr_in.clkin</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+                <spirit:port>
+                    <spirit:name>ddr_in_reset</spirit:name>
+                    <spirit:displayName>ddr_in_reset</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>in</spirit:direction>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">ddr_in.reset</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+                <spirit:port>
+                    <spirit:name>ddr_in_sclk</spirit:name>
+                    <spirit:displayName>ddr_in_sclk</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>out</spirit:direction>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">ddr_in.sclk</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+                <spirit:port>
+                    <spirit:name>ddr_in_datain</spirit:name>
+                    <spirit:displayName>ddr_in_datain</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>in</spirit:direction>
+                        <spirit:vector>
+                            <spirit:left>15</spirit:left>
+                            <spirit:right>0</spirit:right>
+                        </spirit:vector>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">ddr_in.datain</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+                <spirit:port>
+                    <spirit:name>ddr_in_q</spirit:name>
+                    <spirit:displayName>ddr_in_q</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>out</spirit:direction>
+                        <spirit:vector>
+                            <spirit:left>31</spirit:left>
+                            <spirit:right>0</spirit:right>
+                        </spirit:vector>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">ddr_in.q</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+            </spirit:ports>
+        </spirit:model>
+        <spirit:vendorExtensions>
+            <lattice:device>LFE5U-45F-8BG381I</lattice:device>
+            <lattice:synthesis>lse</lattice:synthesis>
+            <lattice:date>2020-06-09.21:25:55</lattice:date>
+            <lattice:modified>2021-01-08.13:29:42</lattice:modified>
+            <lattice:diamond>3.11.0.396.4</lattice:diamond>
+            <lattice:language>Verilog</lattice:language>
+            <lattice:attributes>
+                <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
+                <lattice:attribute lattice:name="Change4to5">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeConfig">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeConnect">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeDevice">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeLocate">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangePack">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangePart">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeSynthesis">false</lattice:attribute>
+                <lattice:attribute lattice:name="Migrate">false</lattice:attribute>
+                <lattice:attribute lattice:name="RemovedComponent">false</lattice:attribute>
+            </lattice:attributes>
+            <lattice:elements/>
+            <lattice:lpc/>
+            <lattice:groups/>
+        </spirit:vendorExtensions>
+    </spirit:component>
+    <spirit:design>
+        <spirit:vendor>LATTICE</spirit:vendor>
+        <spirit:library>LOCAL</spirit:library>
+        <spirit:name>hdmi_in</spirit:name>
+        <spirit:version>1.0</spirit:version>
+        <spirit:componentInstances>
+            <spirit:componentInstance>
+                <spirit:instanceName>ddr_in</spirit:instanceName>
+                <spirit:componentRef>
+                    <spirit:vendor>Lattice Semiconductor Corporation</spirit:vendor>
+                    <spirit:library>LEGACY</spirit:library>
+                    <spirit:name>DDR_GENERIC</spirit:name>
+                    <spirit:version>6.0</spirit:version>
+                    <spirit:fileSets>
+                        <spirit:fileset>
+                            <spirit:name>Diamond_Simulation</spirit:name>
+                            <spirit:group>simulation</spirit:group>
+                            <spirit:file>
+                                <spirit:name>./ddr_in/ddr_in.v</spirit:name>
+                                <spirit:fileType>verilogSource</spirit:fileType>
+                            </spirit:file>
+                        </spirit:fileset>
+                        <spirit:fileset>
+                            <spirit:name>Diamond_Synthesis</spirit:name>
+                            <spirit:group>synthesis</spirit:group>
+                            <spirit:file>
+                                <spirit:name>./ddr_in/ddr_in.v</spirit:name>
+                                <spirit:fileType>verilogSource</spirit:fileType>
+                            </spirit:file>
+                        </spirit:fileset>
+                    </spirit:fileSets>
+                    <spirit:componentGenerators>
+                        <spirit:componentGenerator spirit:hidden="true" spirit:scope="instance">
+                            <spirit:name>Configuration</spirit:name>
+                            <spirit:apiType>none</spirit:apiType>
+                            <spirit:generatorExe>${sbp_path}/${instance}/generate_core.tcl</spirit:generatorExe>
+                            <spirit:group>CONFIG</spirit:group>
+                        </spirit:componentGenerator>
+                        <spirit:componentGenerator spirit:hidden="true" spirit:scope="instance">
+                            <spirit:name>CreateNGD</spirit:name>
+                            <spirit:apiType>none</spirit:apiType>
+                            <spirit:generatorExe>${sbp_path}/${instance}/generate_ngd.tcl</spirit:generatorExe>
+                            <spirit:group>CONFIG</spirit:group>
+                        </spirit:componentGenerator>
+                        <spirit:componentGenerator spirit:hidden="true" spirit:scope="instance">
+                            <spirit:name>Generation</spirit:name>
+                            <spirit:apiType>none</spirit:apiType>
+                            <spirit:generatorExe>${sbp_path}/${instance}/generate_core.tcl</spirit:generatorExe>
+                            <spirit:group>GENERATE</spirit:group>
+                        </spirit:componentGenerator>
+                    </spirit:componentGenerators>
+                    <spirit:model>
+                        <spirit:views/>
+                        <spirit:ports>
+                            <spirit:port>
+                                <spirit:name>clkin</spirit:name>
+                                <spirit:displayName>clkin</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>in</spirit:direction>
+                                </spirit:wire>
+                                <spirit:vendorExtensions>
+                                    <lattice:attributes>
+                                        <lattice:attribute lattice:name="PadPin">true</lattice:attribute>
+                                    </lattice:attributes>
+                                </spirit:vendorExtensions>
+                            </spirit:port>
+                            <spirit:port>
+                                <spirit:name>reset</spirit:name>
+                                <spirit:displayName>reset</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>in</spirit:direction>
+                                </spirit:wire>
+                            </spirit:port>
+                            <spirit:port>
+                                <spirit:name>sclk</spirit:name>
+                                <spirit:displayName>sclk</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>out</spirit:direction>
+                                </spirit:wire>
+                            </spirit:port>
+                            <spirit:port>
+                                <spirit:name>datain</spirit:name>
+                                <spirit:displayName>datain</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>in</spirit:direction>
+                                    <spirit:vector>
+                                        <spirit:left>15</spirit:left>
+                                        <spirit:right>0</spirit:right>
+                                    </spirit:vector>
+                                </spirit:wire>
+                                <spirit:vendorExtensions>
+                                    <lattice:attributes>
+                                        <lattice:attribute lattice:name="PadPin">true</lattice:attribute>
+                                    </lattice:attributes>
+                                </spirit:vendorExtensions>
+                            </spirit:port>
+                            <spirit:port>
+                                <spirit:name>q</spirit:name>
+                                <spirit:displayName>q</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>out</spirit:direction>
+                                    <spirit:vector>
+                                        <spirit:left>31</spirit:left>
+                                        <spirit:right>0</spirit:right>
+                                    </spirit:vector>
+                                </spirit:wire>
+                            </spirit:port>
+                        </spirit:ports>
+                    </spirit:model>
+                    <spirit:vendorExtensions>
+                        <lattice:synthesis>lse</lattice:synthesis>
+                        <lattice:modified>2021-01-08.13:29:42</lattice:modified>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
+                            <lattice:attribute lattice:name="BBox">false</lattice:attribute>
+                            <lattice:attribute lattice:name="Change4to5">false</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangeConfig">true</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangeConnect">false</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangeDevice">false</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangeLocate">false</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangePack">false</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangePart">false</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangeSynthesis">false</lattice:attribute>
+                            <lattice:attribute lattice:name="CoreType">LPM</lattice:attribute>
+                            <lattice:attribute lattice:name="DCU_RXREFCLK">PRIMARY</lattice:attribute>
+                            <lattice:attribute lattice:name="DCU_TXREFCLK">PRIMARY</lattice:attribute>
+                            <lattice:attribute lattice:name="Migrate">false</lattice:attribute>
+                            <lattice:attribute lattice:name="RemovedComponent">false</lattice:attribute>
+                            <lattice:attribute lattice:name="Resource">IO:17;PLL:0;DLL:0</lattice:attribute>
+                        </lattice:attributes>
+                        <lattice:elements>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F0</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F1</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F10</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F11</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F12</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F13</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F14</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F15</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F2</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F3</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F4</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F5</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F6</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F7</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F8</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>Inst2_IDDRX1F9</lattice:name>
+                                <lattice:type>IOLOGIC</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IOLOGIC</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>clkin</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst3_IB</lattice:attribute>
+                                    <lattice:attribute lattice:name="CLK_SRC">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[0]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB0</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[10]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB10</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[11]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB11</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[12]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB12</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[13]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB13</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[14]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB14</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[15]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB15</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[1]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB1</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[2]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB2</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[3]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB3</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[4]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB4</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[5]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB5</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[6]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB6</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[7]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB7</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[8]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB8</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                            <lattice:element>
+                                <lattice:name>datain[9]</lattice:name>
+                                <lattice:type>IO</lattice:type>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="Block_Name">Inst1_IB9</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="ElementType">IO</lattice:attribute>
+                                    <lattice:attribute lattice:name="isPort">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="ngd">true</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:element>
+                        </lattice:elements>
+                        <lattice:lpc>
+                            <lattice:lpcsection lattice:name="Device"/>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Family</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">ecp5u</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>OperatingCondition</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">IND</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Package</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">CABGA381</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>PartName</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">LFE5U-45F-8BG381I</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>PartType</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">LFE5U-45F</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>SpeedGrade</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">8</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Status</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">S</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcsection lattice:name="IP"/>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>CoreName</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">DDR_GENERIC</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>CoreRevision</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">6.0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>CoreStatus</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Demo</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>CoreType</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">LPM</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Date</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">01/08/2021</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>ModuleName</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">ddr_in</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>ParameterFileVersion</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">1.0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>SourceFormat</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">verilog</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Time</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">13:29:38</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>VendorName</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Lattice Semiconductor Corporation</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcsection lattice:name="Parameters"/>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>AFreq</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant"></lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>ClkIBuf</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">LVDS</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>DataLane</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">By Time</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>DelVal</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant"></lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Delay</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Static Default</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Destination</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Synplicity</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>DynamicAlign</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant"></lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>EDIF</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">1</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>EnDynamic</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>EnDynamicAlign</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant"></lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>EnECLK</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>EnInEdge</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant"></lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Expression</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">BusA(0 to 7)</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Freq</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant"></lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>GenPll</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>IO</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>IOBUF</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant"></lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Interface</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">GDDRX1_RX.SCLK.Centered</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>MIPIFilter</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>NumEdge</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">BOTH</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Order</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Big Endian [MSB:LSB]</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>ReceiverSync</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Reference</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>VHDL</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>Verilog</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">1</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>aligned</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Centered</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>aligned2</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Centered</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>bandwidth</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">4800</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>enClkIBuf</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>freq_in</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">150</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>freq_in2</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">150</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>gear</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">2:1</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>io_type</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">LVCMOS18</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>io_type2</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">LVCMOS18</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>mode</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Receive</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>mode2</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">Receive</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>pre-configuration</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">ENABLED</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>trioddr</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>trioddr2</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">0</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>width</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">16</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>width2</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">16</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                            <lattice:lpcsection lattice:name="Command"/>
+                            <lattice:lpcentry>
+                                <lattice:lpckey>cmd_line</lattice:lpckey>
+                                <lattice:lpcvalue lattice:resolve="constant">-w -n ddr_in -lang verilog -synth lse -bus_exp 7 -bb -arch sa5p00 -type iol -mode Receive -io_type LVCMOS18 -width 16 -freq_in 150 -gear 2 -del 128</lattice:lpcvalue>
+                            </lattice:lpcentry>
+                        </lattice:lpc>
+                        <lattice:groups>
+                            <lattice:group>
+                                <lattice:name>IO</lattice:name>
+                                <lattice:category>1</lattice:category>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="GroupDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="GroupHide">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="GroupType">IO</lattice:attribute>
+                                </lattice:attributes>
+                                <lattice:elementref>clkin</lattice:elementref>
+                                <lattice:elementref>datain[0]</lattice:elementref>
+                                <lattice:elementref>datain[10]</lattice:elementref>
+                                <lattice:elementref>datain[11]</lattice:elementref>
+                                <lattice:elementref>datain[12]</lattice:elementref>
+                                <lattice:elementref>datain[13]</lattice:elementref>
+                                <lattice:elementref>datain[14]</lattice:elementref>
+                                <lattice:elementref>datain[15]</lattice:elementref>
+                                <lattice:elementref>datain[1]</lattice:elementref>
+                                <lattice:elementref>datain[2]</lattice:elementref>
+                                <lattice:elementref>datain[3]</lattice:elementref>
+                                <lattice:elementref>datain[4]</lattice:elementref>
+                                <lattice:elementref>datain[5]</lattice:elementref>
+                                <lattice:elementref>datain[6]</lattice:elementref>
+                                <lattice:elementref>datain[7]</lattice:elementref>
+                                <lattice:elementref>datain[8]</lattice:elementref>
+                                <lattice:elementref>datain[9]</lattice:elementref>
+                            </lattice:group>
+                            <lattice:group>
+                                <lattice:name>IOLOGIC</lattice:name>
+                                <lattice:category>1</lattice:category>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="GroupDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="GroupHide">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="GroupType">IOLOGIC</lattice:attribute>
+                                </lattice:attributes>
+                                <lattice:elementref>Inst2_IDDRX1F0</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F1</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F10</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F11</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F12</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F13</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F14</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F15</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F2</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F3</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F4</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F5</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F6</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F7</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F8</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F9</lattice:elementref>
+                            </lattice:group>
+                            <lattice:group>
+                                <lattice:name>misc_group</lattice:name>
+                                <lattice:category>0</lattice:category>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="GroupDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="GroupHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="GroupType">MISC</lattice:attribute>
+                                </lattice:attributes>
+                            </lattice:group>
+                            <lattice:group>
+                                <lattice:name>sclk_group0</lattice:name>
+                                <lattice:category>0</lattice:category>
+                                <lattice:attributes>
+                                    <lattice:attribute lattice:name="GroupDrag">true</lattice:attribute>
+                                    <lattice:attribute lattice:name="GroupHide">false</lattice:attribute>
+                                    <lattice:attribute lattice:name="GroupType">DDR</lattice:attribute>
+                                    <lattice:attribute lattice:name="Resource">IO:17;PLL:0;DLL:0</lattice:attribute>
+                                </lattice:attributes>
+                                <lattice:elementref>Inst2_IDDRX1F0</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F1</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F10</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F11</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F12</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F13</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F14</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F15</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F2</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F3</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F4</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F5</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F6</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F7</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F8</lattice:elementref>
+                                <lattice:elementref>Inst2_IDDRX1F9</lattice:elementref>
+                                <lattice:elementref>clkin</lattice:elementref>
+                                <lattice:elementref>datain[0]</lattice:elementref>
+                                <lattice:elementref>datain[10]</lattice:elementref>
+                                <lattice:elementref>datain[11]</lattice:elementref>
+                                <lattice:elementref>datain[12]</lattice:elementref>
+                                <lattice:elementref>datain[13]</lattice:elementref>
+                                <lattice:elementref>datain[14]</lattice:elementref>
+                                <lattice:elementref>datain[15]</lattice:elementref>
+                                <lattice:elementref>datain[1]</lattice:elementref>
+                                <lattice:elementref>datain[2]</lattice:elementref>
+                                <lattice:elementref>datain[3]</lattice:elementref>
+                                <lattice:elementref>datain[4]</lattice:elementref>
+                                <lattice:elementref>datain[5]</lattice:elementref>
+                                <lattice:elementref>datain[6]</lattice:elementref>
+                                <lattice:elementref>datain[7]</lattice:elementref>
+                                <lattice:elementref>datain[8]</lattice:elementref>
+                                <lattice:elementref>datain[9]</lattice:elementref>
+                            </lattice:group>
+                        </lattice:groups>
+                    </spirit:vendorExtensions>
+                </spirit:componentRef>
+            </spirit:componentInstance>
+        </spirit:componentInstances>
+        <spirit:adHocConnections>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_clkin</spirit:name>
+                <spirit:displayName>ddr_in_clkin</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:internalPortReference spirit:portRef="clkin" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_clkin"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_reset</spirit:name>
+                <spirit:displayName>ddr_in_reset</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="reset" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_reset"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_sclk</spirit:name>
+                <spirit:displayName>ddr_in_sclk</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="sclk" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_sclk"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain</spirit:name>
+                <spirit:displayName>ddr_in_datain</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:internalPortReference spirit:right="0" spirit:portRef="datain" spirit:componentRef="ddr_in" spirit:left="15"/>
+                <spirit:externalPortReference spirit:right="0" spirit:portRef="ddr_in_datain" spirit:left="15"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[0]</spirit:name>
+                <spirit:displayName>ddr_in_datain[0]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[0]"/>
+                <spirit:internalPortReference spirit:portRef="datain[0]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[10]</spirit:name>
+                <spirit:displayName>ddr_in_datain[10]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[10]"/>
+                <spirit:internalPortReference spirit:portRef="datain[10]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[11]</spirit:name>
+                <spirit:displayName>ddr_in_datain[11]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[11]"/>
+                <spirit:internalPortReference spirit:portRef="datain[11]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[12]</spirit:name>
+                <spirit:displayName>ddr_in_datain[12]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[12]"/>
+                <spirit:internalPortReference spirit:portRef="datain[12]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[13]</spirit:name>
+                <spirit:displayName>ddr_in_datain[13]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[13]"/>
+                <spirit:internalPortReference spirit:portRef="datain[13]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[14]</spirit:name>
+                <spirit:displayName>ddr_in_datain[14]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[14]"/>
+                <spirit:internalPortReference spirit:portRef="datain[14]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[15]</spirit:name>
+                <spirit:displayName>ddr_in_datain[15]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[15]"/>
+                <spirit:internalPortReference spirit:portRef="datain[15]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[1]</spirit:name>
+                <spirit:displayName>ddr_in_datain[1]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[1]"/>
+                <spirit:internalPortReference spirit:portRef="datain[1]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[2]</spirit:name>
+                <spirit:displayName>ddr_in_datain[2]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[2]"/>
+                <spirit:internalPortReference spirit:portRef="datain[2]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[3]</spirit:name>
+                <spirit:displayName>ddr_in_datain[3]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[3]"/>
+                <spirit:internalPortReference spirit:portRef="datain[3]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[4]</spirit:name>
+                <spirit:displayName>ddr_in_datain[4]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[4]"/>
+                <spirit:internalPortReference spirit:portRef="datain[4]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[5]</spirit:name>
+                <spirit:displayName>ddr_in_datain[5]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[5]"/>
+                <spirit:internalPortReference spirit:portRef="datain[5]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[6]</spirit:name>
+                <spirit:displayName>ddr_in_datain[6]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[6]"/>
+                <spirit:internalPortReference spirit:portRef="datain[6]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[7]</spirit:name>
+                <spirit:displayName>ddr_in_datain[7]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[7]"/>
+                <spirit:internalPortReference spirit:portRef="datain[7]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[8]</spirit:name>
+                <spirit:displayName>ddr_in_datain[8]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[8]"/>
+                <spirit:internalPortReference spirit:portRef="datain[8]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_datain[9]</spirit:name>
+                <spirit:displayName>ddr_in_datain[9]</spirit:displayName>
+                <spirit:vendorExtensions>
+                    <lattice:attributes>
+                        <lattice:attribute lattice:name="export">sys_yes</lattice:attribute>
+                    </lattice:attributes>
+                </spirit:vendorExtensions>
+                <spirit:externalPortReference spirit:portRef="ddr_in_datain[9]"/>
+                <spirit:internalPortReference spirit:portRef="datain[9]" spirit:componentRef="ddr_in"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q</spirit:name>
+                <spirit:displayName>ddr_in_q</spirit:displayName>
+                <spirit:internalPortReference spirit:right="0" spirit:portRef="q" spirit:componentRef="ddr_in" spirit:left="31"/>
+                <spirit:externalPortReference spirit:right="0" spirit:portRef="ddr_in_q" spirit:left="31"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[0]</spirit:name>
+                <spirit:displayName>ddr_in_q[0]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[0]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[0]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[10]</spirit:name>
+                <spirit:displayName>ddr_in_q[10]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[10]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[10]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[11]</spirit:name>
+                <spirit:displayName>ddr_in_q[11]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[11]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[11]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[12]</spirit:name>
+                <spirit:displayName>ddr_in_q[12]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[12]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[12]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[13]</spirit:name>
+                <spirit:displayName>ddr_in_q[13]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[13]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[13]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[14]</spirit:name>
+                <spirit:displayName>ddr_in_q[14]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[14]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[14]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[15]</spirit:name>
+                <spirit:displayName>ddr_in_q[15]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[15]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[15]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[16]</spirit:name>
+                <spirit:displayName>ddr_in_q[16]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[16]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[16]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[17]</spirit:name>
+                <spirit:displayName>ddr_in_q[17]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[17]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[17]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[18]</spirit:name>
+                <spirit:displayName>ddr_in_q[18]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[18]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[18]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[19]</spirit:name>
+                <spirit:displayName>ddr_in_q[19]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[19]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[19]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[1]</spirit:name>
+                <spirit:displayName>ddr_in_q[1]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[1]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[1]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[20]</spirit:name>
+                <spirit:displayName>ddr_in_q[20]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[20]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[20]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[21]</spirit:name>
+                <spirit:displayName>ddr_in_q[21]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[21]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[21]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[22]</spirit:name>
+                <spirit:displayName>ddr_in_q[22]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[22]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[22]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[23]</spirit:name>
+                <spirit:displayName>ddr_in_q[23]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[23]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[23]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[24]</spirit:name>
+                <spirit:displayName>ddr_in_q[24]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[24]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[24]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[25]</spirit:name>
+                <spirit:displayName>ddr_in_q[25]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[25]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[25]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[26]</spirit:name>
+                <spirit:displayName>ddr_in_q[26]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[26]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[26]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[27]</spirit:name>
+                <spirit:displayName>ddr_in_q[27]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[27]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[27]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[28]</spirit:name>
+                <spirit:displayName>ddr_in_q[28]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[28]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[28]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[29]</spirit:name>
+                <spirit:displayName>ddr_in_q[29]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[29]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[29]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[2]</spirit:name>
+                <spirit:displayName>ddr_in_q[2]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[2]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[2]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[30]</spirit:name>
+                <spirit:displayName>ddr_in_q[30]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[30]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[30]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[31]</spirit:name>
+                <spirit:displayName>ddr_in_q[31]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[31]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[31]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[3]</spirit:name>
+                <spirit:displayName>ddr_in_q[3]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[3]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[3]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[4]</spirit:name>
+                <spirit:displayName>ddr_in_q[4]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[4]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[4]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[5]</spirit:name>
+                <spirit:displayName>ddr_in_q[5]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[5]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[5]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[6]</spirit:name>
+                <spirit:displayName>ddr_in_q[6]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[6]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[6]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[7]</spirit:name>
+                <spirit:displayName>ddr_in_q[7]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[7]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[7]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[8]</spirit:name>
+                <spirit:displayName>ddr_in_q[8]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[8]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[8]"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>ddr_in_q[9]</spirit:name>
+                <spirit:displayName>ddr_in_q[9]</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="q[9]" spirit:componentRef="ddr_in"/>
+                <spirit:externalPortReference spirit:portRef="ddr_in_q[9]"/>
+            </spirit:adHocConnection>
+        </spirit:adHocConnections>
+    </spirit:design>
+</lattice:project>

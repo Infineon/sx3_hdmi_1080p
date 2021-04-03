@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="hdmi_rx_fullhd" device="LFE5U-45F-8BG381I" default_implementation="impl1">
+    <Options>
+        <Option name="HDL type" value="Verilog"/>
+        <Option name="VerilogStandard" value="Verilog 2001"/>
+    </Options>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
+        <Options>
+            <Option name="HDL type" value="Verilog"/>
+            <Option name="HDL_KEYFILE" value=""/>
+            <Option name="HDL_PARAM" value=""/>
+            <Option name="VERILOG_DIRECTIVES" value=""/>
+            <Option name="VerilogStandard" value="Verilog 2001"/>
+            <Option name="lib" value="work"/>
+            <Option name="top" value="hdmi_rx_top"/>
+            <Option name="include path" value="remote_files/include"/>
+        </Options>
+        <Source name="remote_files/sources/source/ddr3_test_params.v" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="Verilog 2001">
+                <Option name="include path" value=""/>
+            </Options>
+        </Source>
+        <Source name="remote_files/sources/source/design_param.v" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="Verilog 2001">
+                <Option name="include path" value=""/>
+            </Options>
+        </Source>
+        <Source name="remote_files/sources/source/gpif_interface_mod.v" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="Verilog 2001">
+                <Option name="include path" value=""/>
+            </Options>
+        </Source>
+        <Source name="remote_files/sources/source/hdmi_rx_top.v" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="Verilog 2001">
+                <Option name="include path" value=""/>
+            </Options>
+        </Source>
+        <Source name="remote_files/sources/source/i2c_slave.v" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="Verilog 2001">
+                <Option name="include path" value=""/>
+            </Options>
+        </Source>
+        <Source name="remote_files/sources/source/i2s_receiver.v" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="Verilog 2001">
+                <Option name="include path" value=""/>
+            </Options>
+        </Source>
+        <Source name="remote_files/sources/source/i2s_rx_mod.v" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="Verilog 2001">
+                <Option name="include path" value=""/>
+            </Options>
+        </Source>
+        <Source name="remote_files/sources/source/slfifo_interface_mod.v" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="Verilog 2001">
+                <Option name="include path" value=""/>
+            </Options>
+        </Source>
+        <Source name="remote_files/sources/source/wr_fifo_mod.v" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="Verilog 2001">
+                <Option name="include path" value=""/>
+            </Options>
+        </Source>
+        <Source name="remote_files/sources/IP/aud_buf/aud_buf.sbx" type="sbx" type_short="SBX"/>
+        <Source name="remote_files/sources/IP/ddr_ip/ddr_ip.sbx" type="sbx" type_short="SBX"/>
+        <Source name="remote_files/sources/IP/hdmi_in/hdmi_in.sbx" type="sbx" type_short="SBX"/>
+        <Source name="hdmi_rx_fullhd.lpf" type="Logic Preference" type_short="LPF"/>
+    </Implementation>
+    <Strategy name="Strategy1" file="hdmi_rx_fullhd1.sty"/>
+</BaliProject>

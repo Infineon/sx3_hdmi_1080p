@@ -1,0 +1,317 @@
+synthesis:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Fri Jan 08 13:27:57 2021
+
+
+Command Line:  C:\lscc\diamond\3.11_x64\ispfpga\bin\nt64\synthesis.exe -f cam_in_fifo.synproj -sdc F:/cypress_prj/FTP/HDMI_RX_FPGA_design_FULLHD/PAR/ddr_ip/cam_in_fifo/cam_in_fifo.ldc -gui 
+
+Synthesis options:
+The -a option is ecp5u.
+The -s option is 8.
+The -t option is CABGA381.
+The -d option is LFE5U-45F.
+Using package CABGA381.
+Using performance grade 8.
+                                                          
+
+##########################################################
+
+### Lattice Family : ECP5U
+
+### Device  : LFE5U-45F
+
+### Package : CABGA381
+
+### Speed   : 8
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = cam_in_fifo.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true (default)
+DSP utilization = 100 % (default)
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Use IO Insertion = FALSE
+Use IO Reg = FALSE (implied)
+WARNING - synthesis: Cannot pack registers into I/Os because use_io_insertion is FALSE.
+WARNING - synthesis: Ignoring user setting of use_io_reg. Value is set to FALSE.
+Use IO Reg = FALSE
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p F:/cypress_prj/FTP/HDMI_RX_FPGA_design_FULLHD/PAR/ddr_ip/cam_in_fifo (searchpath added)
+Verilog design file = C:/lscc/diamond/3.11_x64/cae_library/synthesis/verilog/ecp5u.v
+Verilog design file = C:/lscc/diamond/3.11_x64/cae_library/synthesis/verilog/pmi_def.v
+Verilog design file = F:/cypress_prj/FTP/HDMI_RX_FPGA_design_FULLHD/PAR/ddr_ip/cam_in_fifo/cam_in_fifo.v
+NGO file = F:/cypress_prj/FTP/HDMI_RX_FPGA_design_FULLHD/PAR/ddr_ip/cam_in_fifo/cam_in_fifo.ngo
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+-sdc option: SDC file input is F:/cypress_prj/FTP/HDMI_RX_FPGA_design_FULLHD/PAR/ddr_ip/cam_in_fifo/cam_in_fifo.ldc.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/lscc/diamond/3.11_x64/cae_library/synthesis/verilog/ecp5u.v. VERI-1482
+Analyzing Verilog file c:/lscc/diamond/3.11_x64/cae_library/synthesis/verilog/pmi_def.v. VERI-1482
+Analyzing Verilog file f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v. VERI-1482
+Analyzing Verilog file C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v. VERI-1482
+Top module name (Verilog): cam_in_fifo
+INFO - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(8): compiling module cam_in_fifo. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(25): compiling module AND2. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(367): compiling module INV. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(656): compiling module OR2. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(810): compiling module XOR2. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(710): compiling module ROM16X1A(initval=16'b0110100110010110). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(710): compiling module ROM16X1A(initval=16'b010000010000). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(710): compiling module ROM16X1A(initval=16'b01000000000100). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(710): compiling module ROM16X1A(initval=16'b0101000000). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(710): compiling module ROM16X1A(initval=16'b0100000000000001). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(710): compiling module ROM16X1A(initval=16'b01001111001000). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(710): compiling module ROM16X1A(initval=16'b010000000000100). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(866): compiling module DP16KD(DATA_WIDTH_A=4,DATA_WIDTH_B=9,REGMODE_A="OUTREG",REGMODE_B="OUTREG"). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(110): compiling module FD1P3BX. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(119): compiling module FD1P3DX. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(168): compiling module FD1S3DX. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(160): compiling module FD1S3BX. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(76): compiling module CCU2C(INIT0=16'b0110011010101010,INIT1=16'b0110011010101010,INJECT1_0="NO",INJECT1_1="NO"). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(76): compiling module CCU2C(INJECT1_0="NO",INJECT1_1="NO"). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(76): compiling module CCU2C(INIT0=16'b1001100110101010,INIT1=16'b1001100110101010,INJECT1_0="NO",INJECT1_1="NO"). VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(757): compiling module VHI. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/ecp5u.v(761): compiling module VLO. VERI-1018
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(1389): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(1453): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(1509): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(1573): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(1637): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(1709): input port CIN is not connected on this instance. VDB-1013
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(1771): input port CIN is not connected on this instance. VDB-1013
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/sa5p00/data/sa5plib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'sa5p45.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.43.
+WARNING - synthesis: There are no design constraints in the file F:/cypress_prj/FTP/HDMI_RX_FPGA_design_FULLHD/PAR/ddr_ip/cam_in_fifo/cam_in_fifo.ldc
+Top-level module name = cam_in_fifo.
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(446): Removing unused instance LUT4_20. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(1215): Removing unused instance FF_51. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(1140): Removing unused instance FF_76. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(903): Removing unused instance FF_138. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(342): Removing unused instance XOR2_t23. VDB-5034
+WARNING - synthesis: There are no design constraints in the file F:/cypress_prj/FTP/HDMI_RX_FPGA_design_FULLHD/PAR/ddr_ip/cam_in_fifo/cam_in_fifo.ldc
+This ldc file was generated by Clarity Designer!
+
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(332): Removing unused instance _6. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(334): Removing unused instance _7. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(336): Removing unused instance _8. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(338): Removing unused instance _9. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(340): Removing unused instance _10. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(344): Removing unused instance _11. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(346): Removing unused instance _12. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(348): Removing unused instance _13. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(350): Removing unused instance _14. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(352): Removing unused instance _15. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(354): Removing unused instance _16. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(356): Removing unused instance _17. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(358): Removing unused instance _18. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(360): Removing unused instance _19. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(362): Removing unused instance _20. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(364): Removing unused instance _21. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(366): Removing unused instance _22. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(368): Removing unused instance _23. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(370): Removing unused instance _24. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(372): Removing unused instance _25. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(374): Removing unused instance _26. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(376): Removing unused instance _27. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(378): Removing unused instance _28. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(380): Removing unused instance _29. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(382): Removing unused instance _30. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(384): Removing unused instance _31. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(386): Removing unused instance _32. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(390): Removing unused instance _33. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(394): Removing unused instance _34. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(398): Removing unused instance _35. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(402): Removing unused instance _36. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(406): Removing unused instance _37. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(410): Removing unused instance _38. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(414): Removing unused instance _39. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(418): Removing unused instance _40. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(422): Removing unused instance _41. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(426): Removing unused instance _42. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(430): Removing unused instance _43. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(434): Removing unused instance _44. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(438): Removing unused instance _45. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(442): Removing unused instance _46. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(450): Removing unused instance _47. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(454): Removing unused instance _48. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(458): Removing unused instance _49. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(462): Removing unused instance _50. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(466): Removing unused instance _51. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(470): Removing unused instance _52. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(474): Removing unused instance _53. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(478): Removing unused instance _54. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(482): Removing unused instance _55. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(486): Removing unused instance _56. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(490): Removing unused instance _57. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(494): Removing unused instance _58. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(498): Removing unused instance _59. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(502): Removing unused instance _60. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(504): Removing unused instance _61. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(508): Removing unused instance _62. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(512): Removing unused instance _63. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(516): Removing unused instance _64. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(520): Removing unused instance _65. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(524): Removing unused instance _66. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(528): Removing unused instance _67. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(566): Removing unused instance _68. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(606): Removing unused instance _69. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(646): Removing unused instance _70. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(686): Removing unused instance _71. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(726): Removing unused instance _72. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(766): Removing unused instance _73. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(806): Removing unused instance _74. VDB-5034
+WARNING - synthesis: f:/cypress_prj/ftp/hdmi_rx_fpga_design_fullhd/par/ddr_ip/cam_in_fifo/cam_in_fifo.v(846): Removing unused instance _75. VDB-5034
+######## Missing driver on net n675. Patching with GND.
+######## Missing driver on net n676. Patching with GND.
+######## Missing driver on net n678. Patching with GND.
+######## Missing driver on net n677. Patching with GND.
+######## Missing driver on net n674. Patching with GND.
+######## Missing driver on net n673. Patching with GND.
+######## Missing driver on net n679. Patching with GND.
+
+
+
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+######## GSR will not be inferred in an NGO flow, unless force_gsr=yes.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+Duplicate register/latch removal. FF_126 is a one-to-one match with FF_113.
+Duplicate register/latch removal. FF_89 is a one-to-one match with FF_77.
+WARNING - synthesis: There are no design constraints in the file cam_in_fifo_for_lpf.sdc
+Writing LPF file F:/cypress_prj/FTP/HDMI_RX_FPGA_design_FULLHD/PAR/ddr_ip/cam_in_fifo/cam_in_fifo.lpf.
+Results of NGD DRC are available in cam_in_fifo_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file F:/cypress_prj/FTP/HDMI_RX_FPGA_design_FULLHD/PAR/ddr_ip/cam_in_fifo/cam_in_fifo.ngo.
+
+################### Begin Area Report (cam_in_fifo)######################
+Number of register bits => 149 of 44457 (0 % )
+AND2 => 2
+CCU2C => 55
+DP16KD => 8
+FD1P3BX => 5
+FD1P3DX => 81
+FD1S3BX => 2
+FD1S3DX => 61
+GSR => 1
+INV => 2
+OR2 => 1
+ROM16X1A => 34
+XOR2 => 23
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 0
+Clock Enable Nets
+Number of Clock Enables: 2
+Top 2 highest fanout Clock Enables:
+  Net : rden_i, loads : 60
+  Net : wren_i, loads : 56
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : rRst, loads : 86
+  Net : rden_i, loads : 60
+  Net : wren_i, loads : 56
+  Net : rptr_0, loads : 9
+  Net : rptr_2, loads : 9
+  Net : rptr_1, loads : 9
+  Net : rptr_4, loads : 9
+  Net : rptr_3, loads : 9
+  Net : rptr_6, loads : 9
+  Net : rptr_5, loads : 9
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk501 [get_nets RdClock]               |  200.000 MHz|  141.163 MHz|    10 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk500 [get_nets WrClock]               |  200.000 MHz|  145.391 MHz|    12 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+Peak Memory Usage: 87.301  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 0.844  secs
+--------------------------------------------------------------

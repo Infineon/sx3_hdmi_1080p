@@ -1,0 +1,3 @@
+Results of NGD DRC are available in aud_buffer_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file F:/cypress_prj/HDMI_Rx_cypress/HDMI_RX_FPGA_design_FULLHD_Industrialgrade_192aud/PAR_aud_release/aud_buf/aud_buffer/aud_buffer.ngo.

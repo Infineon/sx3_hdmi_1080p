@@ -1,0 +1,17 @@
+----------------------------------------------------------------------
+Report for cell aud_buffer.TECH
+Register bits:  27 of 44457 (0.061%)
+I/O cells:      0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               AND2         3          100.0
+                              CCU2C        33          100.0
+                             DP16KD         1          100.0
+                            FD1P3DX        24          100.0
+                            FD1S3BX         1          100.0
+                            FD1S3DX         2          100.0
+                                GSR         1          100.0
+                                INV         7          100.0
+                           ROM16X1A         2          100.0
+                               XOR2         1          100.0
+                              TOTAL        75

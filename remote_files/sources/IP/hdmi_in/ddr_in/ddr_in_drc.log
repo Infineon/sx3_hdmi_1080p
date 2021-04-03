@@ -1,0 +1,3 @@
+Results of NGD DRC are available in ddr_in_drc.log.
+WARNING - synthesis: DRC checking was skipped because the -ngo option was used.
+Writing NGD file F:/cypress_prj/FTP/HDMI_RX_FPGA_design_FULLHD/PAR/hdmi_in/ddr_in/ddr_in.ngo.

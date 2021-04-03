@@ -1,0 +1,349 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Fri Jan 08 13:28:30 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     slfifo_fifo
+Constraint file: slfifo_fifo_temp_lse.sdc 
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk501 [get_nets RdClock]
+            748 items scored, 493 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 3.382ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             FF_68  (from RdClock +)
+   Destination:    FD1S3BX    D              FF_11  (to RdClock -)
+
+   Delay:                   8.592ns  (24.7% logic, 75.3% route), 11 logic levels.
+
+ Constraint Details:
+
+      8.592ns data_path FF_68 to FF_11 violates
+      5.000ns delay constraint less
+     -0.210ns L_S requirement (totaling 5.210ns) by 3.382ns
+
+ Path Details: FF_68 to FF_11
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.438             CK to Q              FF_68 (from RdClock)
+Route        10   e 1.580                                  w_gcount_r29
+LUT4        ---     0.199          AD[4] to DO0            LUT4_32
+Route         8   e 1.435                                  w_g2b_xor_cluster_0
+LUT4        ---     0.199          AD[4] to DO0            LUT4_23
+Route         4   e 1.297                                  wcount_r0
+A1_TO_FCO   ---     0.394           B[2] to COUT           ae_clr_cmp_0
+Route         1   e 0.020                                  co0_9
+FCI_TO_FCO  ---     0.061            CIN to COUT           ae_clr_cmp_1
+Route         1   e 0.020                                  co1_9
+FCI_TO_FCO  ---     0.061            CIN to COUT           ae_clr_cmp_2
+Route         1   e 0.020                                  co2_9
+FCI_TO_FCO  ---     0.061            CIN to COUT           ae_clr_cmp_3
+Route         1   e 0.020                                  co3_9
+FCI_TO_FCO  ---     0.061            CIN to COUT           ae_clr_cmp_4
+Route         1   e 0.020                                  co4_8
+FCI_TO_FCO  ---     0.061            CIN to COUT           ae_clr_cmp_5
+Route         1   e 0.020                                  ae_clr_d_c
+FCI_TO_F    ---     0.386            CIN to S[2]           a3
+Route         1   e 1.020                                  ae_clr_d
+LUT4        ---     0.199          AD[4] to DO0            LUT4_2
+Route         1   e 1.020                                  ae_d
+                  --------
+                    8.592  (24.7% logic, 75.3% route), 11 logic levels.
+
+
+Error:  The following path violates requirements by 3.382ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             FF_68  (from RdClock +)
+   Destination:    FD1S3BX    D              FF_11  (to RdClock -)
+
+   Delay:                   8.592ns  (24.7% logic, 75.3% route), 11 logic levels.
+
+ Constraint Details:
+
+      8.592ns data_path FF_68 to FF_11 violates
+      5.000ns delay constraint less
+     -0.210ns L_S requirement (totaling 5.210ns) by 3.382ns
+
+ Path Details: FF_68 to FF_11
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.438             CK to Q              FF_68 (from RdClock)
+Route        10   e 1.580                                  w_gcount_r29
+LUT4        ---     0.199          AD[4] to DO0            LUT4_32
+Route         8   e 1.435                                  w_g2b_xor_cluster_0
+LUT4        ---     0.199          AD[4] to DO0            LUT4_23
+Route         4   e 1.297                                  wcount_r0
+A1_TO_FCO   ---     0.394           B[2] to COUT           ae_set_cmp_0
+Route         1   e 0.020                                  co0_7
+FCI_TO_FCO  ---     0.061            CIN to COUT           ae_set_cmp_1
+Route         1   e 0.020                                  co1_7
+FCI_TO_FCO  ---     0.061            CIN to COUT           ae_set_cmp_2
+Route         1   e 0.020                                  co2_7
+FCI_TO_FCO  ---     0.061            CIN to COUT           ae_set_cmp_3
+Route         1   e 0.020                                  co3_7
+FCI_TO_FCO  ---     0.061            CIN to COUT           ae_set_cmp_4
+Route         1   e 0.020                                  co4_6
+FCI_TO_FCO  ---     0.061            CIN to COUT           ae_set_cmp_5
+Route         1   e 0.020                                  ae_set_d_c
+FCI_TO_F    ---     0.386            CIN to S[2]           a2
+Route         1   e 1.020                                  ae_set_d
+LUT4        ---     0.199          AD[4] to DO0            LUT4_2
+Route         1   e 1.020                                  ae_d
+                  --------
+                    8.592  (24.7% logic, 75.3% route), 11 logic levels.
+
+
+Error:  The following path violates requirements by 3.301ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             FF_68  (from RdClock +)
+   Destination:    FD1S3BX    D              FF_11  (to RdClock -)
+
+   Delay:                   8.511ns  (24.2% logic, 75.8% route), 10 logic levels.
+
+ Constraint Details:
+
+      8.511ns data_path FF_68 to FF_11 violates
+      5.000ns delay constraint less
+     -0.210ns L_S requirement (totaling 5.210ns) by 3.301ns
+
+ Path Details: FF_68 to FF_11
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.438             CK to Q              FF_68 (from RdClock)
+Route        10   e 1.580                                  w_gcount_r29
+LUT4        ---     0.199          AD[4] to DO0            LUT4_32
+Route         8   e 1.435                                  w_g2b_xor_cluster_0
+LUT4        ---     0.199          AD[4] to DO0            LUT4_25
+Route         4   e 1.297                                  wcount_r2
+A1_TO_FCO   ---     0.394           B[2] to COUT           ae_set_cmp_1
+Route         1   e 0.020                                  co1_7
+FCI_TO_FCO  ---     0.061            CIN to COUT           ae_set_cmp_2
+Route         1   e 0.020                                  co2_7
+FCI_TO_FCO  ---     0.061            CIN to COUT           ae_set_cmp_3
+Route         1   e 0.020                                  co3_7
+FCI_TO_FCO  ---     0.061            CIN to COUT           ae_set_cmp_4
+Route         1   e 0.020                                  co4_6
+FCI_TO_FCO  ---     0.061            CIN to COUT           ae_set_cmp_5
+Route         1   e 0.020                                  ae_set_d_c
+FCI_TO_F    ---     0.386            CIN to S[2]           a2
+Route         1   e 1.020                                  ae_set_d
+LUT4        ---     0.199          AD[4] to DO0            LUT4_2
+Route         1   e 1.020                                  ae_d
+                  --------
+                    8.511  (24.2% logic, 75.8% route), 10 logic levels.
+
+Warning: 8.382 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk500 [get_nets WrClock]
+            826 items scored, 388 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 1.953ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             FF_57  (from WrClock +)
+   Destination:    FD1S3DX    D              FF_0  (to WrClock -)
+
+   Delay:                   7.163ns  (26.0% logic, 74.0% route), 9 logic levels.
+
+ Constraint Details:
+
+      7.163ns data_path FF_57 to FF_0 violates
+      5.000ns delay constraint less
+     -0.210ns L_S requirement (totaling 5.210ns) by 1.953ns
+
+ Path Details: FF_57 to FF_0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.438             CK to Q              FF_57 (from WrClock)
+Route         8   e 1.535                                  r_gcount_w210
+LUT4        ---     0.199          AD[4] to DO0            LUT4_22
+Route         7   e 1.409                                  r_g2b_xor_cluster_0
+LUT4        ---     0.199          AD[4] to DO0            LUT4_13
+Route         3   e 1.239                                  rcount_w1
+A1_TO_FCO   ---     0.394           B[2] to COUT           af_set_cmp_0
+Route         1   e 0.020                                  co0_11
+FCI_TO_FCO  ---     0.061            CIN to COUT           af_set_cmp_1
+Route         1   e 0.020                                  co1_11
+FCI_TO_FCO  ---     0.061            CIN to COUT           af_set_cmp_2
+Route         1   e 0.020                                  co2_11
+FCI_TO_FCO  ---     0.061            CIN to COUT           af_set_cmp_3
+Route         1   e 0.020                                  co3_11
+FCI_TO_FCO  ---     0.061            CIN to COUT           af_set_cmp_4
+Route         1   e 0.020                                  af_set_c
+FCI_TO_F    ---     0.386            CIN to S[2]           a4
+Route         1   e 1.020                                  af_set
+                  --------
+                    7.163  (26.0% logic, 74.0% route), 9 logic levels.
+
+
+Error:  The following path violates requirements by 1.953ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             FF_57  (from WrClock +)
+   Destination:    FD1S3DX    D              FF_0  (to WrClock -)
+
+   Delay:                   7.163ns  (26.0% logic, 74.0% route), 9 logic levels.
+
+ Constraint Details:
+
+      7.163ns data_path FF_57 to FF_0 violates
+      5.000ns delay constraint less
+     -0.210ns L_S requirement (totaling 5.210ns) by 1.953ns
+
+ Path Details: FF_57 to FF_0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.438             CK to Q              FF_57 (from WrClock)
+Route         8   e 1.535                                  r_gcount_w210
+LUT4        ---     0.199          AD[4] to DO0            LUT4_22
+Route         7   e 1.409                                  r_g2b_xor_cluster_0
+LUT4        ---     0.199          AD[4] to DO0            LUT4_14
+Route         3   e 1.239                                  rcount_w2
+A1_TO_FCO   ---     0.394           B[2] to COUT           af_set_cmp_0
+Route         1   e 0.020                                  co0_11
+FCI_TO_FCO  ---     0.061            CIN to COUT           af_set_cmp_1
+Route         1   e 0.020                                  co1_11
+FCI_TO_FCO  ---     0.061            CIN to COUT           af_set_cmp_2
+Route         1   e 0.020                                  co2_11
+FCI_TO_FCO  ---     0.061            CIN to COUT           af_set_cmp_3
+Route         1   e 0.020                                  co3_11
+FCI_TO_FCO  ---     0.061            CIN to COUT           af_set_cmp_4
+Route         1   e 0.020                                  af_set_c
+FCI_TO_F    ---     0.386            CIN to S[2]           a4
+Route         1   e 1.020                                  af_set
+                  --------
+                    7.163  (26.0% logic, 74.0% route), 9 logic levels.
+
+
+Error:  The following path violates requirements by 1.953ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             FF_57  (from WrClock +)
+   Destination:    FD1S3DX    D              FF_34  (to WrClock -)
+
+   Delay:                   7.163ns  (26.0% logic, 74.0% route), 9 logic levels.
+
+ Constraint Details:
+
+      7.163ns data_path FF_57 to FF_34 violates
+      5.000ns delay constraint less
+     -0.210ns L_S requirement (totaling 5.210ns) by 1.953ns
+
+ Path Details: FF_57 to FF_34
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.438             CK to Q              FF_57 (from WrClock)
+Route         8   e 1.535                                  r_gcount_w210
+LUT4        ---     0.199          AD[4] to DO0            LUT4_22
+Route         7   e 1.409                                  r_g2b_xor_cluster_0
+LUT4        ---     0.199          AD[4] to DO0            LUT4_14
+Route         3   e 1.239                                  rcount_w2
+A1_TO_FCO   ---     0.394           B[2] to COUT           full_cmp_0
+Route         1   e 0.020                                  co0_5
+FCI_TO_FCO  ---     0.061            CIN to COUT           full_cmp_1
+Route         1   e 0.020                                  co1_5
+FCI_TO_FCO  ---     0.061            CIN to COUT           full_cmp_2
+Route         1   e 0.020                                  co2_5
+FCI_TO_FCO  ---     0.061            CIN to COUT           full_cmp_3
+Route         1   e 0.020                                  co3_5
+FCI_TO_FCO  ---     0.061            CIN to COUT           full_cmp_4
+Route         1   e 0.020                                  full_d_c
+FCI_TO_F    ---     0.386            CIN to S[2]           a1
+Route         1   e 1.020                                  full_d
+                  --------
+                    7.163  (26.0% logic, 74.0% route), 9 logic levels.
+
+Warning: 6.953 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk501 [get_nets RdClock]               |     5.000 ns|     8.382 ns|    11 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk500 [get_nets WrClock]               |     5.000 ns|     6.953 ns|     9 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+w_g2b_xor_cluster_0                     |       8|     212|     24.06%
+                                        |        |        |
+r_g2b_xor_cluster_0                     |       7|     186|     21.11%
+                                        |        |        |
+co2_3                                   |       1|     178|     20.20%
+                                        |        |        |
+co1_2                                   |       1|     169|     19.18%
+                                        |        |        |
+co2_2                                   |       1|     158|     17.93%
+                                        |        |        |
+w_g2b_xor_cluster_1                     |       3|     148|     16.80%
+                                        |        |        |
+co3_3                                   |       1|     146|     16.57%
+                                        |        |        |
+r_g2b_xor_cluster_1                     |       3|     136|     15.44%
+                                        |        |        |
+co1_3                                   |       1|     132|     14.98%
+                                        |        |        |
+ae_d                                    |       1|     128|     14.53%
+                                        |        |        |
+wcount_r0                               |       4|     111|     12.60%
+                                        |        |        |
+wcount_r1                               |       4|     109|     12.37%
+                                        |        |        |
+co3_2                                   |       1|     108|     12.26%
+                                        |        |        |
+rcount_w1                               |       3|      99|     11.24%
+                                        |        |        |
+rcount_w2                               |       3|      90|     10.22%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 881  Score: 1231125
+
+Constraints cover  1856 paths, 319 nets, and 858 connections (88.1% coverage)
+
+
+Peak memory: 90607616 bytes, TRCE: 3502080 bytes, DLYMAN: 163840 bytes
+CPU_TIME_REPORT: 0 secs 

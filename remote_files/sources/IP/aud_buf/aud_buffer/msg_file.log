@@ -1,0 +1,33 @@
+SCUBA, Version Diamond (64-bit) 3.11.2.446
+Tue Mar 09 16:14:06 2021
+  
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+  
+BEGIN SCUBA Module Synthesis
+  
+    Issued command   : C:\lscc\diamond\3.11_x64\ispfpga\bin\nt64\scuba.exe -w -n aud_buffer -lang verilog -synth lse -bus_exp 7 -bb -arch sa5p00 -type ebfifo -sync_mode -depth 128 -width 16 -regout -no_enable -pe -1 -pf 100 -sync_reset 
+    Circuit name     : aud_buffer
+    Module type      : fifoblk
+    Module Version   : 5.1
+    Ports            : 
+    Inputs       : Data[15:0], Clock, WrEn, RdEn, Reset
+    Outputs      : Q[15:0], Empty, Full, AlmostFull
+    I/O buffer       : not inserted
+    EDIF output      : aud_buffer.edn
+    Verilog output   : aud_buffer.v
+    Verilog template : aud_buffer_tmpl.v
+    Verilog testbench: tb_aud_buffer_tmpl.v
+    Verilog purpose  : for synthesis and simulation
+    Bus notation     : big endian
+    Report output    : aud_buffer.srp
+    Estimated Resource Usage:
+            LUT : 73
+            EBR : 1
+            Reg : 27
+  
+END   SCUBA Module Synthesis
+

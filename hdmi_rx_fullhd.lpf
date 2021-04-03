@@ -1,0 +1,217 @@
+//////////////////////////////////////////////////////////////////////////////////
+//	(c) 2020-2021, Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
+//
+//	This software, including source code, documentation and related materials ("Software") is owned by Cypress Semiconductor Corporation or one of its affiliates ("Cypress") and is protected by and subject to worldwide patent protection (United States and foreign), United States copyright laws and international treaty provisions.  Therefore, you may use this Software only as provided in the license agreement accompanying the software package from which you obtained this Software ("EULA").
+//	If no EULA applies, Cypress hereby grants you a personal, non-exclusive, non-transferable license to copy, modify, and compile the Software source code solely for use in connection with Cypress's integrated circuit products.  Any reproduction, modification, translation, compilation, or representation of this Software except as specified above is prohibited without the express written permission of Cypress.
+//
+//	Disclaimer: THIS SOFTWARE IS PROVIDED AS-IS, WITH NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Cypress reserves the right to make changes to the Software without notice. Cypress does not assume any liability arising out of the application or use of the Software or any product or circuit described in the Software. Cypress does not authorize its products for use in any products where a malfunction or failure of the Cypress product may reasonably be expected to result in significant property damage, injury or death ("High Risk Product"). By including Cypress's product in a High Risk Product, the manufacturer of such system or application assumes all risk of such use and in doing so agrees to indemnify Cypress against all liability.
+//
+//////////////////////////////////////////////////////////////////////////////////
+BLOCK RESETPATHS ;
+BLOCK ASYNCPATHS ;
+BLOCK JTAGPATHS ;
+# On-Board Oscillator
+LOCATE COMP "clk_in" SITE "P3" ;
+IOBUF PORT "clk_in" IO_TYPE=LVDS PULLMODE=NONE ;
+# Input Reset
+LOCATE COMP "reset_i" SITE "E13" ;
+IOBUF PORT "reset_i" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+#	FX3 interface
+LOCATE COMP "fx3_pclk_o" SITE "D11" ;# pixel data clock output
+LOCATE COMP "fx3_pd_o[0]" SITE "G20" ;# pixel data output
+LOCATE COMP "fx3_pd_o[1]" SITE "G19" ;
+LOCATE COMP "fx3_pd_o[2]" SITE "F19" ;
+LOCATE COMP "fx3_pd_o[3]" SITE "H18" ;
+LOCATE COMP "fx3_pd_o[4]" SITE "G16" ;
+LOCATE COMP "fx3_pd_o[5]" SITE "F20" ;
+LOCATE COMP "fx3_pd_o[6]" SITE "H20" ;
+LOCATE COMP "fx3_pd_o[7]" SITE "J16" ;
+LOCATE COMP "fx3_pd_o[8]" SITE "J19" ;
+LOCATE COMP "fx3_pd_o[9]" SITE "H16" ;
+LOCATE COMP "fx3_pd_o[10]" SITE "K19" ;
+LOCATE COMP "fx3_pd_o[11]" SITE "K20" ;
+LOCATE COMP "fx3_pd_o[12]" SITE "J20" ;
+LOCATE COMP "fx3_pd_o[13]" SITE "J17" ;
+LOCATE COMP "fx3_pd_o[14]" SITE "J18" ;
+LOCATE COMP "fx3_pd_o[15]" SITE "K18" ;
+LOCATE COMP "fx3_pd_o[16]" SITE "E17" ;
+LOCATE COMP "fx3_pd_o[17]" SITE "E16" ;
+LOCATE COMP "fx3_pd_o[18]" SITE "F16" ;
+LOCATE COMP "fx3_pd_o[19]" SITE "F17" ;
+LOCATE COMP "fx3_pd_o[20]" SITE "D17" ;
+LOCATE COMP "fx3_pd_o[21]" SITE "E18" ;
+LOCATE COMP "fx3_pd_o[22]" SITE "F18" ;
+LOCATE COMP "fx3_pd_o[23]" SITE "C18" ;
+LOCATE COMP "fx3_pd_o[24]" SITE "C20" ;
+LOCATE COMP "fx3_pd_o[25]" SITE "G18" ;
+LOCATE COMP "fx3_pd_o[26]" SITE "D18" ;
+LOCATE COMP "fx3_pd_o[27]" SITE "D19" ;
+LOCATE COMP "fx3_pd_o[28]" SITE "E19" ;
+LOCATE COMP "fx3_pd_o[29]" SITE "H17" ;
+LOCATE COMP "fx3_pd_o[30]" SITE "E20" ;
+LOCATE COMP "fx3_pd_o[31]" SITE "D20" ;
+LOCATE COMP "fx3_slcs_ctl0_o" SITE "D12" ;
+LOCATE COMP "fx3_slwr_ctl1_o" SITE "A13" ;
+LOCATE COMP "fx3_sloe_ctl2_o" SITE "C12" ;
+LOCATE COMP "fx3_slrd_ctl3_o" SITE "B12" ;
+LOCATE COMP "fx3_flaga_ctl4_i" SITE "E12" ;# WATER MARK
+LOCATE COMP "fx3_flagb_ctl5_i" SITE "E11" ;# DMA READY
+LOCATE COMP "fx3_pktend_ctl7_o" SITE "A12" ;
+LOCATE COMP "fx3_sladdr1_ctl11_o" SITE "C14" ;
+LOCATE COMP "fx3_sladdr0_ctl12_o" SITE "A14" ;
+LOCATE COMP "fx3_i2c_scl_io" SITE "R3" ;
+LOCATE COMP "fx3_i2c_sda_io" SITE "V1" ;
+IOBUF PORT "fx3_pclk_o" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[0]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[1]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[2]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[3]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[4]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[5]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[6]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[7]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[8]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[9]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[10]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[11]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[12]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[13]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[14]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[15]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[16]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[17]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[18]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[19]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[20]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[21]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[22]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[23]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[24]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[25]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[26]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[27]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[28]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[29]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[30]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_pd_o[31]" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_slcs_ctl0_o" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_slwr_ctl1_o" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_sloe_ctl2_o" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "fx3_slrd_ctl3_o" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "fx3_flaga_ctl4_i" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "fx3_flagb_ctl5_i" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "fx3_pktend_ctl7_o" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_sladdr1_ctl11_o" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_sladdr0_ctl12_o" IO_TYPE=LVCMOS18 ;
+IOBUF PORT "fx3_i2c_scl_io" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "fx3_i2c_sda_io" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+SYSCONFIG SLAVE_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE CONFIG_IOVOLTAGE=1.8 ;
+BANK 0 VCCIO 1.8 V;
+BANK 1 VCCIO 1.8 V;
+BANK 2 VCCIO 1.8 V;
+BANK 3 VCCIO 1.8 V;
+BANK 8 VCCIO 1.8 V;
+#	HDMI receiver inputs
+LOCATE COMP "hdmi_y_i[0]" SITE "U20" ;
+LOCATE COMP "hdmi_y_i[1]" SITE "P18" ;
+LOCATE COMP "hdmi_y_i[2]" SITE "T20" ;
+LOCATE COMP "hdmi_y_i[3]" SITE "P19" ;
+LOCATE COMP "hdmi_y_i[4]" SITE "U17" ;
+LOCATE COMP "hdmi_y_i[5]" SITE "T17" ;
+LOCATE COMP "hdmi_y_i[6]" SITE "U18" ;
+LOCATE COMP "hdmi_y_i[7]" SITE "U16" ;
+LOCATE COMP "hdmi_cbcr_i[0]" SITE "M19" ;
+LOCATE COMP "hdmi_cbcr_i[1]" SITE "T19" ;
+LOCATE COMP "hdmi_cbcr_i[2]" SITE "L19" ;
+LOCATE COMP "hdmi_cbcr_i[3]" SITE "R18" ;
+LOCATE COMP "hdmi_cbcr_i[4]" SITE "R17" ;
+LOCATE COMP "hdmi_cbcr_i[5]" SITE "M17" ;
+LOCATE COMP "hdmi_cbcr_i[6]" SITE "R16" ;
+LOCATE COMP "hdmi_cbcr_i[7]" SITE "N16" ;
+LOCATE COMP "hdmi_de_i" SITE "C8" ;
+LOCATE COMP "hdmi_vsync_i" SITE "A8" ;
+LOCATE COMP "hdmi_clk_i" SITE "B11" ;
+IOBUF PORT "hdmi_de_i" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_y_i[0]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_y_i[1]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_y_i[2]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_y_i[3]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_y_i[4]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_y_i[5]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_y_i[6]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_y_i[7]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_cbcr_i[0]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_cbcr_i[1]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_cbcr_i[2]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_cbcr_i[3]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_cbcr_i[4]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_cbcr_i[5]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_cbcr_i[6]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "hdmi_cbcr_i[7]" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+LOCATE COMP "hdmi_vsync_i" SITE "A8" ;
+IOBUF PORT "hdmi_vsync_i" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+LOCATE COMP "hdmi_clk_i" SITE "B11" ;
+IOBUF PORT "hdmi_clk_i" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+#	I2S Interface
+LOCATE COMP "i2s_sclk_i" SITE "C10" ;
+LOCATE COMP "i2s_ws_i" SITE "P17" ;
+LOCATE COMP "i2s_d0_i" SITE "N18" ;
+IOBUF PORT "i2s_sclk_i" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "i2s_ws_i" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+IOBUF PORT "i2s_d0_i" IO_TYPE=LVCMOS18 PULLMODE=NONE ;
+###########		Timing Constarints			############
+FREQUENCY PORT "hdmi_clk_i" 75.000000 MHz PAR_ADJ 25.000000 ;
+FREQUENCY PORT "clk_in" 100.000000 MHz ;
+#FREQUENCY NET "pll_clk2" 100.000000 MHz PAR_ADJ 25.000000 ;
+#INPUT_SETUP PORT "fx3_flagb_ctl5_i" INPUT_DELAY 1.000000 ns HOLD 0.000000 ns CLKNET "pll_clk2" ;
+#INPUT_SETUP PORT "fx3_flaga_ctl4_i" INPUT_DELAY 1.000000 ns HOLD 0.000000 ns CLKNET "pll_clk2" ;
+BLOCK PATH FROM CLKNET "hdmi_clk_o" TO CLKNET "pll_clk2" ;
+BLOCK PATH FROM CLKNET "pll_clk2" TO CLKNET "hdmi_clk_o" ;
+#MAXDELAY NET "fx3_flaga_ctl4_i_c" 4.000000 ns ;
+#MAXDELAY NET "fx3_flagb_ctl5_i_c" 3.000000 ns ;
+BLOCK PATH FROM PORT "reset_*" ;
+FREQUENCY NET "hdmi_clk_o" 75.000000 MHz PAR_ADJ 25.000000 ;
+
+# Modified Constraints
+
+INPUT_SETUP PORT "fx3_flagb_ctl5_i" INPUT_DELAY 4.00000 ns HOLD 0.000000 ns CLKNET "pll_clk1" ;
+INPUT_SETUP PORT "fx3_flaga_ctl4_i" INPUT_DELAY 5.000000 ns HOLD 0.000000 ns CLKNET "pll_clk1" ;
+
+MAXDELAY NET "fx3_flaga_ctl4_i_c" 4.000000 ns ;
+MAXDELAY NET "fx3_flagb_ctl5_i_c" 4.000000 ns ;
+
+
+# -----------------------------------------------------------------
+#
+# Clock to Output Delay
+#
+# -----------------------------------------------------------------
+
+# -----------------------------------------------------------------
+#
+# Maximum Propogation Delay:
+#
+#  Where, P is Period of Clock (10 ns)
+#         Tsp is the Setup Time of SX3 (2 ns)
+#         PDMAXb is the Maximum Board Propogation Delay (0.25 ns)
+#         PDMINb is the Minimum Board Propogation Delay (0.1 ns)
+#         Tskew is the clock skew (0.1 ns)
+#         Thp is Hold Time of SX3 (0 ns)
+#
+# Maximum Value = P - Tsp - PDMAXb + Tskew
+#
+#               = 10 - 2 - 0.25 + 0.1 = 7.85 ns
+#
+# Minumum Value = Thp - PDMINb + Tskew
+#
+#               = 0 - 0.1 + 0.1 = 0 ns
+#
+# -----------------------------------------------------------------
+
+CLOCK_TO_OUT PORT "fx3_pd_o[*]"         MAX 7.85 ns MIN 0.00 ns CLKNET "pll_clk1" CLKOUT PORT "fx3_pclk_o" ;
+
+# For following ports, consider Thp = 0.5 ns.
+CLOCK_TO_OUT PORT "fx3_slwr_ctl1_o"     MAX 7.85 ns MIN 0.5 ns CLKNET "pll_clk1" CLKOUT PORT "fx3_pclk_o" ;
+CLOCK_TO_OUT PORT "fx3_pktend_ctl7_o"   MAX 7.85 ns MIN 0.5 ns CLKNET "pll_clk1" CLKOUT PORT "fx3_pclk_o" ;
+CLOCK_TO_OUT PORT "fx3_sladdr1_ctl11_o" MAX 7.85 ns MIN 0.5 ns CLKNET "pll_clk1" CLKOUT PORT "fx3_pclk_o" ;
+CLOCK_TO_OUT PORT "fx3_sladdr0_ctl12_o" MAX 7.85 ns MIN 0.5 ns CLKNET "pll_clk1" CLKOUT PORT "fx3_pclk_o" ;
